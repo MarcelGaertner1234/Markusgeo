@@ -210,7 +210,10 @@
 
         <div class="main-content">
             <div class="tab-buttons">
-                <button class="tab-button active" onclick="showTab('enhanced')">
+                <button class="tab-button active" onclick="showTab('kreistag')">
+                    🏛️ Kreistagskandidaten-Karte
+                </button>
+                <button class="tab-button" onclick="showTab('enhanced')">
                     🗺️ Erweiterte Karte (Kandidaten-Ansicht)
                 </button>
                 <button class="tab-button" onclick="showTab('standard')">
@@ -221,7 +224,36 @@
                 </button>
             </div>
             
-            <div id="enhanced" class="tab-content active">
+            <div id="kreistag" class="tab-content active">
+                <div class="map-container">
+                    <iframe src="wahlbezirke_kreistag_map.html"></iframe>
+                </div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🏛️ Kreistagskandidaten-Features</h3>
+                        <ul class="feature-list">
+                            <li><b>Marcus Schmitz</b> - Kreis-WBZ 1 (8 Bezirke)</li>
+                            <li><b>Thomas Schlegel</b> - Kreis-WBZ 2 (8 Bezirke)</li>
+                            <li>Einklappbare Legende mit Toggle</li>
+                            <li>Umschaltung zwischen Ansichten</li>
+                            <li>Direkte Kandidaten-Auswahl</li>
+                            <li>Farbcodierung nach Kreistagkandidat</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>🎯 Bedienung</h3>
+                        <ul class="feature-list">
+                            <li>Klicken Sie auf Kreistagskandidaten-Buttons</li>
+                            <li>Wechseln zwischen Gruppierungs-Modi</li>
+                            <li>Legende ein-/ausklappen mit Header-Klick</li>
+                            <li>Einzelne Kandidaten direkt anwählbar</li>
+                            <li>Status zeigt aktive Auswahl</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="enhanced" class="tab-content">
                 <div class="map-container">
                     <iframe src="wahlbezirke_map_enhanced.html"></iframe>
                 </div>
@@ -290,6 +322,9 @@
                 </a>
                 <a href="kandidaten_bezirke.csv" download>
                     <span>📋</span> Bezirks-Details
+                </a>
+                <a href="kreistagskandidaten_uebersicht.csv" download>
+                    <span>🏛️</span> Kreistagskandidaten
                 </a>
             </div>
         </div>

@@ -1,0 +1,34 @@
+{
+  "kreistagskandidaten": {
+    "Marcus Schmitz": {
+      "kreis_wbz": 1,
+      "wahlbezirke": ["WBZ 10", "WBZ 20", "WBZ 60", "WBZ 70", "WBZ 80", "WBZ 90", "WBZ 100", "WBZ 110"],
+      "kandidaten": [
+        "Gisa Hauschildt",
+        "Jörg Reintsema", 
+        "Ulrike Herrgesell",
+        "Thomas Hellbusch",
+        "Philipp Beck",
+        "Manfred Henry Daub",
+        "Christopher Seinsche",
+        "Björn Dittich"
+      ],
+      "farbe": "#1976D2"
+    },
+    "Thomas Schlegel": {
+      "kreis_wbz": 2,
+      "wahlbezirke": ["WBZ 30", "WBZ 40", "WBZ 50", "WBZ 120", "WBZ 130", "WBZ 140", "WBZ 150", "WBZ 160"],
+      "kandidaten": [
+        "Dagmar Schmitz",
+        "Jörg Menne",
+        "Markus Lang",
+        "Titzian Crisci",
+        "Stephan Rühl",
+        "Roger Adolphs",
+        "Frank Schmitz",
+        "Thomas Schlegel"
+      ],
+      "farbe": "#D32F2F"
+    }
+  }
+}
