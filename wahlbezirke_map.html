@@ -1,0 +1,2459 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8688aa52e076da0f1500dc79570d4f4f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+        <div style="position: fixed; 
+                    bottom: 50px; right: 50px; width: 250px; height: auto; 
+                    background-color: white; z-index: 1000; 
+                    border: 2px solid grey; border-radius: 5px;
+                    padding: 10px; font-size: 14px;">
+        <p style="margin: 0; font-weight: bold; text-align: center;">CDU Wahlbezirke Nümbrecht</p>
+        <hr style="margin: 5px 0;">
+        
+            <p style="margin: 5px 0;">
+                <span style="background-color: #FF6B6B; 
+                           width: 20px; height: 20px; 
+                           display: inline-block; 
+                           border-radius: 50%; 
+                           vertical-align: middle;"></span>
+                <b>Bezirk 1:</b> Kandidat 1
+            </p>
+            
+            <p style="margin: 5px 0;">
+                <span style="background-color: #4ECDC4; 
+                           width: 20px; height: 20px; 
+                           display: inline-block; 
+                           border-radius: 50%; 
+                           vertical-align: middle;"></span>
+                <b>Bezirk 2:</b> Kandidat 2
+            </p>
+            
+            <p style="margin: 5px 0;">
+                <span style="background-color: #45B7D1; 
+                           width: 20px; height: 20px; 
+                           display: inline-block; 
+                           border-radius: 50%; 
+                           vertical-align: middle;"></span>
+                <b>Bezirk 3:</b> Kandidat 3
+            </p>
+            
+            <p style="margin: 5px 0;">
+                <span style="background-color: #FFA07A; 
+                           width: 20px; height: 20px; 
+                           display: inline-block; 
+                           border-radius: 50%; 
+                           vertical-align: middle;"></span>
+                <b>Bezirk 4:</b> Kandidat 4
+            </p>
+            </div>
+    
+            <div class="folium-map" id="map_8688aa52e076da0f1500dc79570d4f4f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8688aa52e076da0f1500dc79570d4f4f = L.map(
+                "map_8688aa52e076da0f1500dc79570d4f4f",
+                {
+                    center: [50.9099826556962, 7.543516756962026],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bb6b149ad6f50ccd5ef58335e38660a6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_bb6b149ad6f50ccd5ef58335e38660a6.addTo(map_8688aa52e076da0f1500dc79570d4f4f);
+        
+    
+            var feature_group_c902073e3c65f650e5c13bb2feb1166e = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_marker_423e120b4314fe1f2e04a410b34e88b2 = L.circleMarker(
+                [50.9028266, 7.5424202],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_fd81deac63cfa5f8e65a484c598c731e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e4dfaceacb2406a762422990d1e1c5a6 = $(`<div id="html_e4dfaceacb2406a762422990d1e1c5a6" style="width: 100.0%; height: 100.0%;">             <b>Poststraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.902827, Lon: 7.542420</small>             </div>`)[0];
+                popup_fd81deac63cfa5f8e65a484c598c731e.setContent(html_e4dfaceacb2406a762422990d1e1c5a6);
+            
+        
+
+        circle_marker_423e120b4314fe1f2e04a410b34e88b2.bindPopup(popup_fd81deac63cfa5f8e65a484c598c731e)
+        ;
+
+        
+    
+    
+            circle_marker_423e120b4314fe1f2e04a410b34e88b2.bindTooltip(
+                `<div>
+                     Poststraße (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4ffe5706634d7e84ef46f3e8879fdc02 = L.circleMarker(
+                [50.9009632, 7.5492144],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_62334e2bb2a87210c5afeefe985b14ae = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_773127d060ebdf8ef6b3caac3da5a4d5 = $(`<div id="html_773127d060ebdf8ef6b3caac3da5a4d5" style="width: 100.0%; height: 100.0%;">             <b>Dr.-Horst-Frese-Straße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.900963, Lon: 7.549214</small>             </div>`)[0];
+                popup_62334e2bb2a87210c5afeefe985b14ae.setContent(html_773127d060ebdf8ef6b3caac3da5a4d5);
+            
+        
+
+        circle_marker_4ffe5706634d7e84ef46f3e8879fdc02.bindPopup(popup_62334e2bb2a87210c5afeefe985b14ae)
+        ;
+
+        
+    
+    
+            circle_marker_4ffe5706634d7e84ef46f3e8879fdc02.bindTooltip(
+                `<div>
+                     Dr.-Horst-Frese-Straße (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_56a9d8b843a72de7feb9475b3040c3b0 = L.circleMarker(
+                [50.9032281, 7.542596],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_41f77d59f59bbdcf93778b8c54827811 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f397348e054c51aadd920b0e8dc0d874 = $(`<div id="html_f397348e054c51aadd920b0e8dc0d874" style="width: 100.0%; height: 100.0%;">             <b>Meta-Herz-Straße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.903228, Lon: 7.542596</small>             </div>`)[0];
+                popup_41f77d59f59bbdcf93778b8c54827811.setContent(html_f397348e054c51aadd920b0e8dc0d874);
+            
+        
+
+        circle_marker_56a9d8b843a72de7feb9475b3040c3b0.bindPopup(popup_41f77d59f59bbdcf93778b8c54827811)
+        ;
+
+        
+    
+    
+            circle_marker_56a9d8b843a72de7feb9475b3040c3b0.bindTooltip(
+                `<div>
+                     Meta-Herz-Straße (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e550da1654193695069e4284857d3ad3 = L.circleMarker(
+                [50.910077, 7.5451492],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_fe00b785d1a91e621dbdfc9ff350a6c6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c80f37896c1e26b4783d1a64157dac5b = $(`<div id="html_c80f37896c1e26b4783d1a64157dac5b" style="width: 100.0%; height: 100.0%;">             <b>Höhenstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.910077, Lon: 7.545149</small>             </div>`)[0];
+                popup_fe00b785d1a91e621dbdfc9ff350a6c6.setContent(html_c80f37896c1e26b4783d1a64157dac5b);
+            
+        
+
+        circle_marker_e550da1654193695069e4284857d3ad3.bindPopup(popup_fe00b785d1a91e621dbdfc9ff350a6c6)
+        ;
+
+        
+    
+    
+            circle_marker_e550da1654193695069e4284857d3ad3.bindTooltip(
+                `<div>
+                     Höhenstraße (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a93bc7b0c05fcbb911f273365831042b = L.circleMarker(
+                [50.9035481, 7.542955],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_68a4805627337a134bda13331387a7c4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_de6a17734d93885c8d855b6ffb15b2d2 = $(`<div id="html_de6a17734d93885c8d855b6ffb15b2d2" style="width: 100.0%; height: 100.0%;">             <b>Parkstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.903548, Lon: 7.542955</small>             </div>`)[0];
+                popup_68a4805627337a134bda13331387a7c4.setContent(html_de6a17734d93885c8d855b6ffb15b2d2);
+            
+        
+
+        circle_marker_a93bc7b0c05fcbb911f273365831042b.bindPopup(popup_68a4805627337a134bda13331387a7c4)
+        ;
+
+        
+    
+    
+            circle_marker_a93bc7b0c05fcbb911f273365831042b.bindTooltip(
+                `<div>
+                     Parkstraße (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8fc408b591bd37fe980543cdec122f62 = L.circleMarker(
+                [50.9060209, 7.5373575],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_c8578d693b0f48c1f8fb90ff9104f77d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_be8f00ebfcdae6ae8d759d94f62b98ee = $(`<div id="html_be8f00ebfcdae6ae8d759d94f62b98ee" style="width: 100.0%; height: 100.0%;">             <b>Erlenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.906021, Lon: 7.537357</small>             </div>`)[0];
+                popup_c8578d693b0f48c1f8fb90ff9104f77d.setContent(html_be8f00ebfcdae6ae8d759d94f62b98ee);
+            
+        
+
+        circle_marker_8fc408b591bd37fe980543cdec122f62.bindPopup(popup_c8578d693b0f48c1f8fb90ff9104f77d)
+        ;
+
+        
+    
+    
+            circle_marker_8fc408b591bd37fe980543cdec122f62.bindTooltip(
+                `<div>
+                     Erlenweg (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f1777ffd615b55f236c49a8603103c76 = L.circleMarker(
+                [50.9038696, 7.5326207],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_67bc2efd9ec13d9a32dd90af8b1e3cdd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b921af6e781612c1ae3b855b7512e302 = $(`<div id="html_b921af6e781612c1ae3b855b7512e302" style="width: 100.0%; height: 100.0%;">             <b>Gouvieuxstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.903870, Lon: 7.532621</small>             </div>`)[0];
+                popup_67bc2efd9ec13d9a32dd90af8b1e3cdd.setContent(html_b921af6e781612c1ae3b855b7512e302);
+            
+        
+
+        circle_marker_f1777ffd615b55f236c49a8603103c76.bindPopup(popup_67bc2efd9ec13d9a32dd90af8b1e3cdd)
+        ;
+
+        
+    
+    
+            circle_marker_f1777ffd615b55f236c49a8603103c76.bindTooltip(
+                `<div>
+                     Gouvieuxstraße (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bb6ed20b2d6435b16b4890be2af4cb0a = L.circleMarker(
+                [50.9042478, 7.5385338],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_6d86b892be08d856fdfe3b3ab91a10af = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_60bfe67df6625be2d0ebecaa5bb670a1 = $(`<div id="html_60bfe67df6625be2d0ebecaa5bb670a1" style="width: 100.0%; height: 100.0%;">             <b>Leo-Baer-Straße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.904248, Lon: 7.538534</small>             </div>`)[0];
+                popup_6d86b892be08d856fdfe3b3ab91a10af.setContent(html_60bfe67df6625be2d0ebecaa5bb670a1);
+            
+        
+
+        circle_marker_bb6ed20b2d6435b16b4890be2af4cb0a.bindPopup(popup_6d86b892be08d856fdfe3b3ab91a10af)
+        ;
+
+        
+    
+    
+            circle_marker_bb6ed20b2d6435b16b4890be2af4cb0a.bindTooltip(
+                `<div>
+                     Leo-Baer-Straße (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5f5e03438ed43007233e54d5c2da9788 = L.circleMarker(
+                [50.9041152, 7.5360799],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_fa44aaa22d177bcb60f0bb4c308e1d3f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_57086dff1ea61d99c3a3db7de658ef19 = $(`<div id="html_57086dff1ea61d99c3a3db7de658ef19" style="width: 100.0%; height: 100.0%;">             <b>Mateh-Yehuda-Straße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.904115, Lon: 7.536080</small>             </div>`)[0];
+                popup_fa44aaa22d177bcb60f0bb4c308e1d3f.setContent(html_57086dff1ea61d99c3a3db7de658ef19);
+            
+        
+
+        circle_marker_5f5e03438ed43007233e54d5c2da9788.bindPopup(popup_fa44aaa22d177bcb60f0bb4c308e1d3f)
+        ;
+
+        
+    
+    
+            circle_marker_5f5e03438ed43007233e54d5c2da9788.bindTooltip(
+                `<div>
+                     Mateh-Yehuda-Straße (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6763de0f13756d1a5db071fe1525d69b = L.circleMarker(
+                [50.9026286, 7.5410559],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_4b870894c7406e22939efd61ef7084fb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_52432331d899f4ea63c5f25d45f263dd = $(`<div id="html_52432331d899f4ea63c5f25d45f263dd" style="width: 100.0%; height: 100.0%;">             <b>Schustergasse</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.902629, Lon: 7.541056</small>             </div>`)[0];
+                popup_4b870894c7406e22939efd61ef7084fb.setContent(html_52432331d899f4ea63c5f25d45f263dd);
+            
+        
+
+        circle_marker_6763de0f13756d1a5db071fe1525d69b.bindPopup(popup_4b870894c7406e22939efd61ef7084fb)
+        ;
+
+        
+    
+    
+            circle_marker_6763de0f13756d1a5db071fe1525d69b.bindTooltip(
+                `<div>
+                     Schustergasse (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ff7cf4f4cf0c145b06f0b3aa76f314cd = L.circleMarker(
+                [50.9012113, 7.5330299],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_148ff3ae6237e5bbc525e4a988cf4dd8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b8767f8a397d4a53f84f7ae8cc289cf4 = $(`<div id="html_b8767f8a397d4a53f84f7ae8cc289cf4" style="width: 100.0%; height: 100.0%;">             <b>Fingerhutweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.901211, Lon: 7.533030</small>             </div>`)[0];
+                popup_148ff3ae6237e5bbc525e4a988cf4dd8.setContent(html_b8767f8a397d4a53f84f7ae8cc289cf4);
+            
+        
+
+        circle_marker_ff7cf4f4cf0c145b06f0b3aa76f314cd.bindPopup(popup_148ff3ae6237e5bbc525e4a988cf4dd8)
+        ;
+
+        
+    
+    
+            circle_marker_ff7cf4f4cf0c145b06f0b3aa76f314cd.bindTooltip(
+                `<div>
+                     Fingerhutweg (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a1752ff19efd8c1b721c6b6fa3bf680a = L.circleMarker(
+                [50.902156, 7.532058],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_4420a5d2c4875b0bf2e5c6f93e2769d0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e839db07975e8ee7361b2051a2384b46 = $(`<div id="html_e839db07975e8ee7361b2051a2384b46" style="width: 100.0%; height: 100.0%;">             <b>Maiglöckchenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.902156, Lon: 7.532058</small>             </div>`)[0];
+                popup_4420a5d2c4875b0bf2e5c6f93e2769d0.setContent(html_e839db07975e8ee7361b2051a2384b46);
+            
+        
+
+        circle_marker_a1752ff19efd8c1b721c6b6fa3bf680a.bindPopup(popup_4420a5d2c4875b0bf2e5c6f93e2769d0)
+        ;
+
+        
+    
+    
+            circle_marker_a1752ff19efd8c1b721c6b6fa3bf680a.bindTooltip(
+                `<div>
+                     Maiglöckchenweg (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cd0d5b9250e3a70eca15fd8278c5a4a5 = L.circleMarker(
+                [50.8997293, 7.5369443],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_e55281b4658732ae0c750d92d1e1e5ae = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2c7b2a1f7bcbaffc5097a27a633fddea = $(`<div id="html_2c7b2a1f7bcbaffc5097a27a633fddea" style="width: 100.0%; height: 100.0%;">             <b>Orchideenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.899729, Lon: 7.536944</small>             </div>`)[0];
+                popup_e55281b4658732ae0c750d92d1e1e5ae.setContent(html_2c7b2a1f7bcbaffc5097a27a633fddea);
+            
+        
+
+        circle_marker_cd0d5b9250e3a70eca15fd8278c5a4a5.bindPopup(popup_e55281b4658732ae0c750d92d1e1e5ae)
+        ;
+
+        
+    
+    
+            circle_marker_cd0d5b9250e3a70eca15fd8278c5a4a5.bindTooltip(
+                `<div>
+                     Orchideenweg (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_81ca4d7681eda3547ad9e8ce3f5def42 = L.circleMarker(
+                [50.9025612, 7.5327291],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_26c6cee4dd09630a1263e2280d733d3f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8b8e32735e88498b4f7c42fd0ad476ae = $(`<div id="html_8b8e32735e88498b4f7c42fd0ad476ae" style="width: 100.0%; height: 100.0%;">             <b>Veilchenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.902561, Lon: 7.532729</small>             </div>`)[0];
+                popup_26c6cee4dd09630a1263e2280d733d3f.setContent(html_8b8e32735e88498b4f7c42fd0ad476ae);
+            
+        
+
+        circle_marker_81ca4d7681eda3547ad9e8ce3f5def42.bindPopup(popup_26c6cee4dd09630a1263e2280d733d3f)
+        ;
+
+        
+    
+    
+            circle_marker_81ca4d7681eda3547ad9e8ce3f5def42.bindTooltip(
+                `<div>
+                     Veilchenweg (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ebc035883c7c83aaee255461c733c200 = L.circleMarker(
+                [50.9292704, 7.5497141],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_5d3c676a5ecc821105aa5fb3cc29163b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2908cf5b8b37539552ac784021a4695f = $(`<div id="html_2908cf5b8b37539552ac784021a4695f" style="width: 100.0%; height: 100.0%;">             <b>Denkmalweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.929270, Lon: 7.549714</small>             </div>`)[0];
+                popup_5d3c676a5ecc821105aa5fb3cc29163b.setContent(html_2908cf5b8b37539552ac784021a4695f);
+            
+        
+
+        circle_marker_ebc035883c7c83aaee255461c733c200.bindPopup(popup_5d3c676a5ecc821105aa5fb3cc29163b)
+        ;
+
+        
+    
+    
+            circle_marker_ebc035883c7c83aaee255461c733c200.bindTooltip(
+                `<div>
+                     Denkmalweg (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_be0e9328440c3887c6a2100d0d3459b4 = L.circleMarker(
+                [50.9311169, 7.5550323],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_ba52898acdbb0964785927974b58ce8a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e002188bd898ddc41a0bac3619205197 = $(`<div id="html_e002188bd898ddc41a0bac3619205197" style="width: 100.0%; height: 100.0%;">             <b>Kirschbaumweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.931117, Lon: 7.555032</small>             </div>`)[0];
+                popup_ba52898acdbb0964785927974b58ce8a.setContent(html_e002188bd898ddc41a0bac3619205197);
+            
+        
+
+        circle_marker_be0e9328440c3887c6a2100d0d3459b4.bindPopup(popup_ba52898acdbb0964785927974b58ce8a)
+        ;
+
+        
+    
+    
+            circle_marker_be0e9328440c3887c6a2100d0d3459b4.bindTooltip(
+                `<div>
+                     Kirschbaumweg (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ce90bf685522ebe6b246ea1156d29cbe = L.circleMarker(
+                [50.9264623, 7.5503435],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_3e49f34a554f91e72aa543d3c0770814 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d48083cb1afc18552f689c7e0b19ca7b = $(`<div id="html_d48083cb1afc18552f689c7e0b19ca7b" style="width: 100.0%; height: 100.0%;">             <b>Starenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.926462, Lon: 7.550344</small>             </div>`)[0];
+                popup_3e49f34a554f91e72aa543d3c0770814.setContent(html_d48083cb1afc18552f689c7e0b19ca7b);
+            
+        
+
+        circle_marker_ce90bf685522ebe6b246ea1156d29cbe.bindPopup(popup_3e49f34a554f91e72aa543d3c0770814)
+        ;
+
+        
+    
+    
+            circle_marker_ce90bf685522ebe6b246ea1156d29cbe.bindTooltip(
+                `<div>
+                     Starenweg (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dfc36a24e34a61528c64dc887750090e = L.circleMarker(
+                [50.9262787, 7.5552728],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_48020080964feff592c4d98d60bf80db = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_537b497924ddf152f4d1489af00d207a = $(`<div id="html_537b497924ddf152f4d1489af00d207a" style="width: 100.0%; height: 100.0%;">             <b>Bachstelzenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.926279, Lon: 7.555273</small>             </div>`)[0];
+                popup_48020080964feff592c4d98d60bf80db.setContent(html_537b497924ddf152f4d1489af00d207a);
+            
+        
+
+        circle_marker_dfc36a24e34a61528c64dc887750090e.bindPopup(popup_48020080964feff592c4d98d60bf80db)
+        ;
+
+        
+    
+    
+            circle_marker_dfc36a24e34a61528c64dc887750090e.bindTooltip(
+                `<div>
+                     Bachstelzenweg (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ef242968c89448523c39ae5e0955ec8d = L.circleMarker(
+                [50.9315238, 7.5660418],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_6ed2b938ba884a01d78142708bb3292d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9d19479403525475f4ffc37d2bb3fabe = $(`<div id="html_9d19479403525475f4ffc37d2bb3fabe" style="width: 100.0%; height: 100.0%;">             <b>Kiefernweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.931524, Lon: 7.566042</small>             </div>`)[0];
+                popup_6ed2b938ba884a01d78142708bb3292d.setContent(html_9d19479403525475f4ffc37d2bb3fabe);
+            
+        
+
+        circle_marker_ef242968c89448523c39ae5e0955ec8d.bindPopup(popup_6ed2b938ba884a01d78142708bb3292d)
+        ;
+
+        
+    
+    
+            circle_marker_ef242968c89448523c39ae5e0955ec8d.bindTooltip(
+                `<div>
+                     Kiefernweg (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_671fa8b45e6461aa904920c5755b6371 = L.circleMarker(
+                [50.90394, 7.585267],
+                {"bubblingMouseEvents": true, "color": "#FF6B6B", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF6B6B", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_c902073e3c65f650e5c13bb2feb1166e);
+        
+    
+        var popup_6f2d055dea78e1c03aec9f519ea20542 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c6a9ec12a9bf32ddc63c6cec1eff8ae8 = $(`<div id="html_c6a9ec12a9bf32ddc63c6cec1eff8ae8" style="width: 100.0%; height: 100.0%;">             <b>Mühlenbergweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 1<br>             <b>CDU-Kandidat:</b> Kandidat 1<br>             <small>Lat: 50.903940, Lon: 7.585267</small>             </div>`)[0];
+                popup_6f2d055dea78e1c03aec9f519ea20542.setContent(html_c6a9ec12a9bf32ddc63c6cec1eff8ae8);
+            
+        
+
+        circle_marker_671fa8b45e6461aa904920c5755b6371.bindPopup(popup_6f2d055dea78e1c03aec9f519ea20542)
+        ;
+
+        
+    
+    
+            circle_marker_671fa8b45e6461aa904920c5755b6371.bindTooltip(
+                `<div>
+                     Mühlenbergweg (Bezirk 1)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_c902073e3c65f650e5c13bb2feb1166e.addTo(map_8688aa52e076da0f1500dc79570d4f4f);
+        
+    
+            var feature_group_de8229dea331f3162f35a88a16fc63c9 = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_marker_2b6ac3986b4e6bb9e6da0d9e47629929 = L.circleMarker(
+                [50.8974904, 7.5423655],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_1febd66229a205c6c1ca5baf7faee829 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_93ed6f5e6dee5b40cecc4d109bc3e9c8 = $(`<div id="html_93ed6f5e6dee5b40cecc4d109bc3e9c8" style="width: 100.0%; height: 100.0%;">             <b>Amselweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.897490, Lon: 7.542365</small>             </div>`)[0];
+                popup_1febd66229a205c6c1ca5baf7faee829.setContent(html_93ed6f5e6dee5b40cecc4d109bc3e9c8);
+            
+        
+
+        circle_marker_2b6ac3986b4e6bb9e6da0d9e47629929.bindPopup(popup_1febd66229a205c6c1ca5baf7faee829)
+        ;
+
+        
+    
+    
+            circle_marker_2b6ac3986b4e6bb9e6da0d9e47629929.bindTooltip(
+                `<div>
+                     Amselweg (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_98a3b8315f158b8ebc898079bde1ec16 = L.circleMarker(
+                [50.9028606, 7.5419391],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_77d8e7c73eab9076f04d9fe2e33aca96 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_86136803b357688be7bfd29497a0f786 = $(`<div id="html_86136803b357688be7bfd29497a0f786" style="width: 100.0%; height: 100.0%;">             <b>Dr.-Rieck-Straße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.902861, Lon: 7.541939</small>             </div>`)[0];
+                popup_77d8e7c73eab9076f04d9fe2e33aca96.setContent(html_86136803b357688be7bfd29497a0f786);
+            
+        
+
+        circle_marker_98a3b8315f158b8ebc898079bde1ec16.bindPopup(popup_77d8e7c73eab9076f04d9fe2e33aca96)
+        ;
+
+        
+    
+    
+            circle_marker_98a3b8315f158b8ebc898079bde1ec16.bindTooltip(
+                `<div>
+                     Dr.-Rieck-Straße (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_832b67f8fa8394445c50750a2c14158e = L.circleMarker(
+                [50.8990181, 7.5421419],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_6fe53223e3cc56db6caa5938cef7e918 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e852aa5b4c0f440e40194cf64850269d = $(`<div id="html_e852aa5b4c0f440e40194cf64850269d" style="width: 100.0%; height: 100.0%;">             <b>Nachtigallenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.899018, Lon: 7.542142</small>             </div>`)[0];
+                popup_6fe53223e3cc56db6caa5938cef7e918.setContent(html_e852aa5b4c0f440e40194cf64850269d);
+            
+        
+
+        circle_marker_832b67f8fa8394445c50750a2c14158e.bindPopup(popup_6fe53223e3cc56db6caa5938cef7e918)
+        ;
+
+        
+    
+    
+            circle_marker_832b67f8fa8394445c50750a2c14158e.bindTooltip(
+                `<div>
+                     Nachtigallenweg (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c55f1e90b21ecfff0264dfaba35149af = L.circleMarker(
+                [50.9087664, 7.5367495],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_c13a89a658e418a55b44bdf7a87588d4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_013b6221a1de5de2b7d88f82e10db943 = $(`<div id="html_013b6221a1de5de2b7d88f82e10db943" style="width: 100.0%; height: 100.0%;">             <b>Kirchweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.908766, Lon: 7.536749</small>             </div>`)[0];
+                popup_c13a89a658e418a55b44bdf7a87588d4.setContent(html_013b6221a1de5de2b7d88f82e10db943);
+            
+        
+
+        circle_marker_c55f1e90b21ecfff0264dfaba35149af.bindPopup(popup_c13a89a658e418a55b44bdf7a87588d4)
+        ;
+
+        
+    
+    
+            circle_marker_c55f1e90b21ecfff0264dfaba35149af.bindTooltip(
+                `<div>
+                     Kirchweg (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_be38a8422ead544277d3096a03512dac = L.circleMarker(
+                [50.9039982, 7.5448432],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_88711ec9e0fc3bdf03d979f723635b94 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_af6aa8130403070f41ccea2b2f147ffe = $(`<div id="html_af6aa8130403070f41ccea2b2f147ffe" style="width: 100.0%; height: 100.0%;">             <b>Weiherstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.903998, Lon: 7.544843</small>             </div>`)[0];
+                popup_88711ec9e0fc3bdf03d979f723635b94.setContent(html_af6aa8130403070f41ccea2b2f147ffe);
+            
+        
+
+        circle_marker_be38a8422ead544277d3096a03512dac.bindPopup(popup_88711ec9e0fc3bdf03d979f723635b94)
+        ;
+
+        
+    
+    
+            circle_marker_be38a8422ead544277d3096a03512dac.bindTooltip(
+                `<div>
+                     Weiherstraße (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_23d9a244ed066e713665ee5334997b8b = L.circleMarker(
+                [50.9068846, 7.5407896],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_f052eb80d94e4050db019c8ab6abb947 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_77f883cd8133dde4ce6a17aec284f325 = $(`<div id="html_77f883cd8133dde4ce6a17aec284f325" style="width: 100.0%; height: 100.0%;">             <b>Feldstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.906885, Lon: 7.540790</small>             </div>`)[0];
+                popup_f052eb80d94e4050db019c8ab6abb947.setContent(html_77f883cd8133dde4ce6a17aec284f325);
+            
+        
+
+        circle_marker_23d9a244ed066e713665ee5334997b8b.bindPopup(popup_f052eb80d94e4050db019c8ab6abb947)
+        ;
+
+        
+    
+    
+            circle_marker_23d9a244ed066e713665ee5334997b8b.bindTooltip(
+                `<div>
+                     Feldstraße (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c2a60d2b34cd41157ce0da9071045f85 = L.circleMarker(
+                [50.9020173, 7.5409326],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_886b601cd8b3c45439936561cef64300 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2c74ae67fe0c1e9d1edc513d657c81bc = $(`<div id="html_2c74ae67fe0c1e9d1edc513d657c81bc" style="width: 100.0%; height: 100.0%;">             <b>Hauptstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.902017, Lon: 7.540933</small>             </div>`)[0];
+                popup_886b601cd8b3c45439936561cef64300.setContent(html_2c74ae67fe0c1e9d1edc513d657c81bc);
+            
+        
+
+        circle_marker_c2a60d2b34cd41157ce0da9071045f85.bindPopup(popup_886b601cd8b3c45439936561cef64300)
+        ;
+
+        
+    
+    
+            circle_marker_c2a60d2b34cd41157ce0da9071045f85.bindTooltip(
+                `<div>
+                     Hauptstraße (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ff45e9c11e71cdd36b8e8b41ca4a19eb = L.circleMarker(
+                [50.9023145, 7.5376838],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_58a8772aa2fa147ba9513a9ef482b060 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f4777002845130be552baab8193508a1 = $(`<div id="html_f4777002845130be552baab8193508a1" style="width: 100.0%; height: 100.0%;">             <b>Lilienweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.902315, Lon: 7.537684</small>             </div>`)[0];
+                popup_58a8772aa2fa147ba9513a9ef482b060.setContent(html_f4777002845130be552baab8193508a1);
+            
+        
+
+        circle_marker_ff45e9c11e71cdd36b8e8b41ca4a19eb.bindPopup(popup_58a8772aa2fa147ba9513a9ef482b060)
+        ;
+
+        
+    
+    
+            circle_marker_ff45e9c11e71cdd36b8e8b41ca4a19eb.bindTooltip(
+                `<div>
+                     Lilienweg (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_56fa7721f7315d1b28cd2ba368bc09ce = L.circleMarker(
+                [50.9029227, 7.5335673],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_585541e918ab10eb770d1b76d1740601 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_89e1b0e563fafb7491867938dcb4d9f0 = $(`<div id="html_89e1b0e563fafb7491867938dcb4d9f0" style="width: 100.0%; height: 100.0%;">             <b>Rotkleeweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.902923, Lon: 7.533567</small>             </div>`)[0];
+                popup_585541e918ab10eb770d1b76d1740601.setContent(html_89e1b0e563fafb7491867938dcb4d9f0);
+            
+        
+
+        circle_marker_56fa7721f7315d1b28cd2ba368bc09ce.bindPopup(popup_585541e918ab10eb770d1b76d1740601)
+        ;
+
+        
+    
+    
+            circle_marker_56fa7721f7315d1b28cd2ba368bc09ce.bindTooltip(
+                `<div>
+                     Rotkleeweg (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0db2ff28394c81781c0de6a350afecb2 = L.circleMarker(
+                [50.9057286, 7.537209],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_e53bcac189b02c2c4d7c252ecfc59c2d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e62c1a3a2a722a51b725ca09063488bb = $(`<div id="html_e62c1a3a2a722a51b725ca09063488bb" style="width: 100.0%; height: 100.0%;">             <b>Wiesenstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.905729, Lon: 7.537209</small>             </div>`)[0];
+                popup_e53bcac189b02c2c4d7c252ecfc59c2d.setContent(html_e62c1a3a2a722a51b725ca09063488bb);
+            
+        
+
+        circle_marker_0db2ff28394c81781c0de6a350afecb2.bindPopup(popup_e53bcac189b02c2c4d7c252ecfc59c2d)
+        ;
+
+        
+    
+    
+            circle_marker_0db2ff28394c81781c0de6a350afecb2.bindTooltip(
+                `<div>
+                     Wiesenstraße (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_aa4b44865645a48bbfbcaf80910be62d = L.circleMarker(
+                [50.9023403, 7.5323643],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_3a906286f5ee90f7c1b8d30ce9fc8463 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_20fa3104fca8f975da4fe30a931d9f66 = $(`<div id="html_20fa3104fca8f975da4fe30a931d9f66" style="width: 100.0%; height: 100.0%;">             <b>Goldnesselweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.902340, Lon: 7.532364</small>             </div>`)[0];
+                popup_3a906286f5ee90f7c1b8d30ce9fc8463.setContent(html_20fa3104fca8f975da4fe30a931d9f66);
+            
+        
+
+        circle_marker_aa4b44865645a48bbfbcaf80910be62d.bindPopup(popup_3a906286f5ee90f7c1b8d30ce9fc8463)
+        ;
+
+        
+    
+    
+            circle_marker_aa4b44865645a48bbfbcaf80910be62d.bindTooltip(
+                `<div>
+                     Goldnesselweg (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3a1721646cf616e6efb5a68b8f2061b1 = L.circleMarker(
+                [50.9018758, 7.5329861],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_a32bed43bca40eb08aa41bed5a5743b0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6e8f718997efda531608e65e7b9dee20 = $(`<div id="html_6e8f718997efda531608e65e7b9dee20" style="width: 100.0%; height: 100.0%;">             <b>Margeritenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.901876, Lon: 7.532986</small>             </div>`)[0];
+                popup_a32bed43bca40eb08aa41bed5a5743b0.setContent(html_6e8f718997efda531608e65e7b9dee20);
+            
+        
+
+        circle_marker_3a1721646cf616e6efb5a68b8f2061b1.bindPopup(popup_a32bed43bca40eb08aa41bed5a5743b0)
+        ;
+
+        
+    
+    
+            circle_marker_3a1721646cf616e6efb5a68b8f2061b1.bindTooltip(
+                `<div>
+                     Margeritenweg (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_96d1aafc91b7cff423c80c9b4c7825c3 = L.circleMarker(
+                [50.9011471, 7.5368298],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_af6a4c063454eb5969b3a4fbe551d27e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e6d838bd846c888be6fd4e7bbf721259 = $(`<div id="html_e6d838bd846c888be6fd4e7bbf721259" style="width: 100.0%; height: 100.0%;">             <b>Schlüsselblumenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.901147, Lon: 7.536830</small>             </div>`)[0];
+                popup_af6a4c063454eb5969b3a4fbe551d27e.setContent(html_e6d838bd846c888be6fd4e7bbf721259);
+            
+        
+
+        circle_marker_96d1aafc91b7cff423c80c9b4c7825c3.bindPopup(popup_af6a4c063454eb5969b3a4fbe551d27e)
+        ;
+
+        
+    
+    
+            circle_marker_96d1aafc91b7cff423c80c9b4c7825c3.bindTooltip(
+                `<div>
+                     Schlüsselblumenweg (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7212da910e21f1a11cf0d1c49903e853 = L.circleMarker(
+                [50.8992156, 7.5337845],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_b0dd1a18303f3b434b99e0cbbb1bd3f4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5363f0d1e6303eae58ea33be886c891e = $(`<div id="html_5363f0d1e6303eae58ea33be886c891e" style="width: 100.0%; height: 100.0%;">             <b>Wildrosenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.899216, Lon: 7.533785</small>             </div>`)[0];
+                popup_b0dd1a18303f3b434b99e0cbbb1bd3f4.setContent(html_5363f0d1e6303eae58ea33be886c891e);
+            
+        
+
+        circle_marker_7212da910e21f1a11cf0d1c49903e853.bindPopup(popup_b0dd1a18303f3b434b99e0cbbb1bd3f4)
+        ;
+
+        
+    
+    
+            circle_marker_7212da910e21f1a11cf0d1c49903e853.bindTooltip(
+                `<div>
+                     Wildrosenweg (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1a02b020b4dc4ac3c516ea1c9a5cdef5 = L.circleMarker(
+                [50.9276375, 7.553004],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_1946b522311097cee6871c3c993fc7cd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a0a14e163ff113d1f1a9f1dc329d501c = $(`<div id="html_a0a14e163ff113d1f1a9f1dc329d501c" style="width: 100.0%; height: 100.0%;">             <b>Drosselweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.927638, Lon: 7.553004</small>             </div>`)[0];
+                popup_1946b522311097cee6871c3c993fc7cd.setContent(html_a0a14e163ff113d1f1a9f1dc329d501c);
+            
+        
+
+        circle_marker_1a02b020b4dc4ac3c516ea1c9a5cdef5.bindPopup(popup_1946b522311097cee6871c3c993fc7cd)
+        ;
+
+        
+    
+    
+            circle_marker_1a02b020b4dc4ac3c516ea1c9a5cdef5.bindTooltip(
+                `<div>
+                     Drosselweg (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_09640e3f41d08bc46a87b42e2b52565d = L.circleMarker(
+                [50.9267758, 7.5523756],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_f94d5661d50e33fb113cf1fdc8ef057a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_abe4999caa14dab914c5f6418fa7e48e = $(`<div id="html_abe4999caa14dab914c5f6418fa7e48e" style="width: 100.0%; height: 100.0%;">             <b>Meisenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.926776, Lon: 7.552376</small>             </div>`)[0];
+                popup_f94d5661d50e33fb113cf1fdc8ef057a.setContent(html_abe4999caa14dab914c5f6418fa7e48e);
+            
+        
+
+        circle_marker_09640e3f41d08bc46a87b42e2b52565d.bindPopup(popup_f94d5661d50e33fb113cf1fdc8ef057a)
+        ;
+
+        
+    
+    
+            circle_marker_09640e3f41d08bc46a87b42e2b52565d.bindTooltip(
+                `<div>
+                     Meisenweg (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_af36c0ccd244934697729c7f3844d707 = L.circleMarker(
+                [50.934432, 7.5539544],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_c1bc8fbe8d32b7d2c9f08aac2b4d2592 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e67fd4f18ed6aa7d35c9b50d9cdc5dd7 = $(`<div id="html_e67fd4f18ed6aa7d35c9b50d9cdc5dd7" style="width: 100.0%; height: 100.0%;">             <b>Stollenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.934432, Lon: 7.553954</small>             </div>`)[0];
+                popup_c1bc8fbe8d32b7d2c9f08aac2b4d2592.setContent(html_e67fd4f18ed6aa7d35c9b50d9cdc5dd7);
+            
+        
+
+        circle_marker_af36c0ccd244934697729c7f3844d707.bindPopup(popup_c1bc8fbe8d32b7d2c9f08aac2b4d2592)
+        ;
+
+        
+    
+    
+            circle_marker_af36c0ccd244934697729c7f3844d707.bindTooltip(
+                `<div>
+                     Stollenweg (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0cbce186e5e5bfd113171f49b83f96dc = L.circleMarker(
+                [50.9314732, 7.5587714],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_3224f8d51ea45c208b743361e02b1de8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5dd494010fa34bce8ce5117abade8083 = $(`<div id="html_5dd494010fa34bce8ce5117abade8083" style="width: 100.0%; height: 100.0%;">             <b>Freibadstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.931473, Lon: 7.558771</small>             </div>`)[0];
+                popup_3224f8d51ea45c208b743361e02b1de8.setContent(html_5dd494010fa34bce8ce5117abade8083);
+            
+        
+
+        circle_marker_0cbce186e5e5bfd113171f49b83f96dc.bindPopup(popup_3224f8d51ea45c208b743361e02b1de8)
+        ;
+
+        
+    
+    
+            circle_marker_0cbce186e5e5bfd113171f49b83f96dc.bindTooltip(
+                `<div>
+                     Freibadstraße (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_28e826fc6cf823df27a827f6c7c21f39 = L.circleMarker(
+                [50.9318558, 7.556641],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_4cd19d5c27a2d2ad2a2381b676c521b5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cc59fe1cc1087d2e7fd59b40a6c6118a = $(`<div id="html_cc59fe1cc1087d2e7fd59b40a6c6118a" style="width: 100.0%; height: 100.0%;">             <b>Lindenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.931856, Lon: 7.556641</small>             </div>`)[0];
+                popup_4cd19d5c27a2d2ad2a2381b676c521b5.setContent(html_cc59fe1cc1087d2e7fd59b40a6c6118a);
+            
+        
+
+        circle_marker_28e826fc6cf823df27a827f6c7c21f39.bindPopup(popup_4cd19d5c27a2d2ad2a2381b676c521b5)
+        ;
+
+        
+    
+    
+            circle_marker_28e826fc6cf823df27a827f6c7c21f39.bindTooltip(
+                `<div>
+                     Lindenweg (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bf75e936c018b905d6adff8ecfcddb4e = L.circleMarker(
+                [50.9033978, 7.5409481],
+                {"bubblingMouseEvents": true, "color": "#4ECDC4", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4ECDC4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_de8229dea331f3162f35a88a16fc63c9);
+        
+    
+        var popup_4061491d4cc6152e1e4584d143e5b2a1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_62b9e3f9168eb272bce438883fba4764 = $(`<div id="html_62b9e3f9168eb272bce438883fba4764" style="width: 100.0%; height: 100.0%;">             <b>Gering</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 2<br>             <b>CDU-Kandidat:</b> Kandidat 2<br>             <small>Lat: 50.903398, Lon: 7.540948</small>             </div>`)[0];
+                popup_4061491d4cc6152e1e4584d143e5b2a1.setContent(html_62b9e3f9168eb272bce438883fba4764);
+            
+        
+
+        circle_marker_bf75e936c018b905d6adff8ecfcddb4e.bindPopup(popup_4061491d4cc6152e1e4584d143e5b2a1)
+        ;
+
+        
+    
+    
+            circle_marker_bf75e936c018b905d6adff8ecfcddb4e.bindTooltip(
+                `<div>
+                     Gering (Bezirk 2)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_de8229dea331f3162f35a88a16fc63c9.addTo(map_8688aa52e076da0f1500dc79570d4f4f);
+        
+    
+            var feature_group_e454169dcf9c1ecaadeeb8ddd0691667 = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_marker_c210a099553543756e97203ed12fb5aa = L.circleMarker(
+                [50.9013511, 7.5456073],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_bdf09efacab99428d75a8f1575fd4188 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7fd12ae45d65b9c912447aa124fd8f0d = $(`<div id="html_7fd12ae45d65b9c912447aa124fd8f0d" style="width: 100.0%; height: 100.0%;">             <b>Bitzenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.901351, Lon: 7.545607</small>             </div>`)[0];
+                popup_bdf09efacab99428d75a8f1575fd4188.setContent(html_7fd12ae45d65b9c912447aa124fd8f0d);
+            
+        
+
+        circle_marker_c210a099553543756e97203ed12fb5aa.bindPopup(popup_bdf09efacab99428d75a8f1575fd4188)
+        ;
+
+        
+    
+    
+            circle_marker_c210a099553543756e97203ed12fb5aa.bindTooltip(
+                `<div>
+                     Bitzenweg (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b80373f39ffb050f95c1e30ca84c9a36 = L.circleMarker(
+                [50.9003195, 7.5417366],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_64ddefaa73873002e8c316a2d07b9bb0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d30fa996167b4c1d02cabf477981fb62 = $(`<div id="html_d30fa996167b4c1d02cabf477981fb62" style="width: 100.0%; height: 100.0%;">             <b>Finkenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.900320, Lon: 7.541737</small>             </div>`)[0];
+                popup_64ddefaa73873002e8c316a2d07b9bb0.setContent(html_d30fa996167b4c1d02cabf477981fb62);
+            
+        
+
+        circle_marker_b80373f39ffb050f95c1e30ca84c9a36.bindPopup(popup_64ddefaa73873002e8c316a2d07b9bb0)
+        ;
+
+        
+    
+    
+            circle_marker_b80373f39ffb050f95c1e30ca84c9a36.bindTooltip(
+                `<div>
+                     Finkenweg (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_95b4241e404ac9da113e7848644ca450 = L.circleMarker(
+                [50.9087167, 7.540799],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_e0ce3de5893e6744edb4326e87bf0536 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d999d28a9d961becf466bd934c54a811 = $(`<div id="html_d999d28a9d961becf466bd934c54a811" style="width: 100.0%; height: 100.0%;">             <b>Bahnhofstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.908717, Lon: 7.540799</small>             </div>`)[0];
+                popup_e0ce3de5893e6744edb4326e87bf0536.setContent(html_d999d28a9d961becf466bd934c54a811);
+            
+        
+
+        circle_marker_95b4241e404ac9da113e7848644ca450.bindPopup(popup_e0ce3de5893e6744edb4326e87bf0536)
+        ;
+
+        
+    
+    
+            circle_marker_95b4241e404ac9da113e7848644ca450.bindTooltip(
+                `<div>
+                     Bahnhofstraße (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fd1e41a6d6fb454fbd9b9faec722ce7a = L.circleMarker(
+                [50.9088631, 7.5444605],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_91432489aac5946dfc1d471568a21d23 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b86ba784d8a5799d101d2c4ba7360c9c = $(`<div id="html_b86ba784d8a5799d101d2c4ba7360c9c" style="width: 100.0%; height: 100.0%;">             <b>Kapellenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.908863, Lon: 7.544460</small>             </div>`)[0];
+                popup_91432489aac5946dfc1d471568a21d23.setContent(html_b86ba784d8a5799d101d2c4ba7360c9c);
+            
+        
+
+        circle_marker_fd1e41a6d6fb454fbd9b9faec722ce7a.bindPopup(popup_91432489aac5946dfc1d471568a21d23)
+        ;
+
+        
+    
+    
+            circle_marker_fd1e41a6d6fb454fbd9b9faec722ce7a.bindTooltip(
+                `<div>
+                     Kapellenweg (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e405e77d62c6ca7fea46489736c1d13d = L.circleMarker(
+                [50.9031272, 7.5345371],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_295230d25fc296a4b598ce228f02a72e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4861cdfb8b8c2563e78f1df1708190a4 = $(`<div id="html_4861cdfb8b8c2563e78f1df1708190a4" style="width: 100.0%; height: 100.0%;">             <b>Anemonenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.903127, Lon: 7.534537</small>             </div>`)[0];
+                popup_295230d25fc296a4b598ce228f02a72e.setContent(html_4861cdfb8b8c2563e78f1df1708190a4);
+            
+        
+
+        circle_marker_e405e77d62c6ca7fea46489736c1d13d.bindPopup(popup_295230d25fc296a4b598ce228f02a72e)
+        ;
+
+        
+    
+    
+            circle_marker_e405e77d62c6ca7fea46489736c1d13d.bindTooltip(
+                `<div>
+                     Anemonenweg (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_16a050fe7b7a1613a58df4a81c332533 = L.circleMarker(
+                [50.9061651, 7.5385063],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_47fc0b43ce763afcd87fefde8eb5bf05 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8addc2c3210d029a91623e41c0ec873f = $(`<div id="html_8addc2c3210d029a91623e41c0ec873f" style="width: 100.0%; height: 100.0%;">             <b>Friedhofstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.906165, Lon: 7.538506</small>             </div>`)[0];
+                popup_47fc0b43ce763afcd87fefde8eb5bf05.setContent(html_8addc2c3210d029a91623e41c0ec873f);
+            
+        
+
+        circle_marker_16a050fe7b7a1613a58df4a81c332533.bindPopup(popup_47fc0b43ce763afcd87fefde8eb5bf05)
+        ;
+
+        
+    
+    
+            circle_marker_16a050fe7b7a1613a58df4a81c332533.bindTooltip(
+                `<div>
+                     Friedhofstraße (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a23ae1050d021107f7a6117eb9be880f = L.circleMarker(
+                [50.9022486, 7.5369569],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_28bd8443fe625c3af52afb1fd99cea1b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_30b8329cd265c7a6df4b0909498917f4 = $(`<div id="html_30b8329cd265c7a6df4b0909498917f4" style="width: 100.0%; height: 100.0%;">             <b>Heckenrosenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.902249, Lon: 7.536957</small>             </div>`)[0];
+                popup_28bd8443fe625c3af52afb1fd99cea1b.setContent(html_30b8329cd265c7a6df4b0909498917f4);
+            
+        
+
+        circle_marker_a23ae1050d021107f7a6117eb9be880f.bindPopup(popup_28bd8443fe625c3af52afb1fd99cea1b)
+        ;
+
+        
+    
+    
+            circle_marker_a23ae1050d021107f7a6117eb9be880f.bindTooltip(
+                `<div>
+                     Heckenrosenweg (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bfee174c998c75e057d7b5abde5d4427 = L.circleMarker(
+                [50.9030022, 7.5414121],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_e52824a539650506c32bfcee39807b27 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1babe341dda8571f617c7cafc02f8c35 = $(`<div id="html_1babe341dda8571f617c7cafc02f8c35" style="width: 100.0%; height: 100.0%;">             <b>Lina-Friedrichs-Straße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.903002, Lon: 7.541412</small>             </div>`)[0];
+                popup_e52824a539650506c32bfcee39807b27.setContent(html_1babe341dda8571f617c7cafc02f8c35);
+            
+        
+
+        circle_marker_bfee174c998c75e057d7b5abde5d4427.bindPopup(popup_e52824a539650506c32bfcee39807b27)
+        ;
+
+        
+    
+    
+            circle_marker_bfee174c998c75e057d7b5abde5d4427.bindTooltip(
+                `<div>
+                     Lina-Friedrichs-Straße (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7a2007a23d72d02384da197f91c02f27 = L.circleMarker(
+                [50.9030093, 7.5300129],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_3c34ea1160abde8525765429e2706c5b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a893f0169a7a58ecd4a43712aaefbec8 = $(`<div id="html_a893f0169a7a58ecd4a43712aaefbec8" style="width: 100.0%; height: 100.0%;">             <b>Sängertsweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.903009, Lon: 7.530013</small>             </div>`)[0];
+                popup_3c34ea1160abde8525765429e2706c5b.setContent(html_a893f0169a7a58ecd4a43712aaefbec8);
+            
+        
+
+        circle_marker_7a2007a23d72d02384da197f91c02f27.bindPopup(popup_3c34ea1160abde8525765429e2706c5b)
+        ;
+
+        
+    
+    
+            circle_marker_7a2007a23d72d02384da197f91c02f27.bindTooltip(
+                `<div>
+                     Sängertsweg (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_344de63acb3a714ffad93e20b90c1fd1 = L.circleMarker(
+                [50.9023653, 7.5362535],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_764b5ec92bc8c93e799fe9a97af2175f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_09398f6d18a98554e74954b74e12c023 = $(`<div id="html_09398f6d18a98554e74954b74e12c023" style="width: 100.0%; height: 100.0%;">             <b>Akeleiweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.902365, Lon: 7.536253</small>             </div>`)[0];
+                popup_764b5ec92bc8c93e799fe9a97af2175f.setContent(html_09398f6d18a98554e74954b74e12c023);
+            
+        
+
+        circle_marker_344de63acb3a714ffad93e20b90c1fd1.bindPopup(popup_764b5ec92bc8c93e799fe9a97af2175f)
+        ;
+
+        
+    
+    
+            circle_marker_344de63acb3a714ffad93e20b90c1fd1.bindTooltip(
+                `<div>
+                     Akeleiweg (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8c9cc050d424928cc08757b17727d096 = L.circleMarker(
+                [50.8982713, 7.5333604],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_f9511aded203ab7e1ced4c38c55c47cb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cb6031933e87398fe37c306f36372e4f = $(`<div id="html_cb6031933e87398fe37c306f36372e4f" style="width: 100.0%; height: 100.0%;">             <b>Holunderweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.898271, Lon: 7.533360</small>             </div>`)[0];
+                popup_f9511aded203ab7e1ced4c38c55c47cb.setContent(html_cb6031933e87398fe37c306f36372e4f);
+            
+        
+
+        circle_marker_8c9cc050d424928cc08757b17727d096.bindPopup(popup_f9511aded203ab7e1ced4c38c55c47cb)
+        ;
+
+        
+    
+    
+            circle_marker_8c9cc050d424928cc08757b17727d096.bindTooltip(
+                `<div>
+                     Holunderweg (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cfeb85bb33040434285031bf94aff7c6 = L.circleMarker(
+                [50.9019175, 7.5351828],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_94df095adb16389735e7c55ec603dde1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d40ce53c9715e3b89008f84707e1c37a = $(`<div id="html_d40ce53c9715e3b89008f84707e1c37a" style="width: 100.0%; height: 100.0%;">             <b>Mohnweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.901918, Lon: 7.535183</small>             </div>`)[0];
+                popup_94df095adb16389735e7c55ec603dde1.setContent(html_d40ce53c9715e3b89008f84707e1c37a);
+            
+        
+
+        circle_marker_cfeb85bb33040434285031bf94aff7c6.bindPopup(popup_94df095adb16389735e7c55ec603dde1)
+        ;
+
+        
+    
+    
+            circle_marker_cfeb85bb33040434285031bf94aff7c6.bindTooltip(
+                `<div>
+                     Mohnweg (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3e777a9fa39afeb457e52965835559ec = L.circleMarker(
+                [50.9006075, 7.5386394],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_6e181b13342303cc5b0195a33d8c5ca9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_11864238c3ea18d2629a69459f844797 = $(`<div id="html_11864238c3ea18d2629a69459f844797" style="width: 100.0%; height: 100.0%;">             <b>Schmiedeweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.900607, Lon: 7.538639</small>             </div>`)[0];
+                popup_6e181b13342303cc5b0195a33d8c5ca9.setContent(html_11864238c3ea18d2629a69459f844797);
+            
+        
+
+        circle_marker_3e777a9fa39afeb457e52965835559ec.bindPopup(popup_6e181b13342303cc5b0195a33d8c5ca9)
+        ;
+
+        
+    
+    
+            circle_marker_3e777a9fa39afeb457e52965835559ec.bindTooltip(
+                `<div>
+                     Schmiedeweg (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_573531f8ab7885c06590e47eacef3ee3 = L.circleMarker(
+                [50.9033978, 7.5409481],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_8915bc1c6c3b8f3cfef73fbb9328fbfe = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_892464515e849e2a5f88c2eb87f37a3d = $(`<div id="html_892464515e849e2a5f88c2eb87f37a3d" style="width: 100.0%; height: 100.0%;">             <b>Göpring</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.903398, Lon: 7.540948</small>             </div>`)[0];
+                popup_8915bc1c6c3b8f3cfef73fbb9328fbfe.setContent(html_892464515e849e2a5f88c2eb87f37a3d);
+            
+        
+
+        circle_marker_573531f8ab7885c06590e47eacef3ee3.bindPopup(popup_8915bc1c6c3b8f3cfef73fbb9328fbfe)
+        ;
+
+        
+    
+    
+            circle_marker_573531f8ab7885c06590e47eacef3ee3.bindTooltip(
+                `<div>
+                     Göpring (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e34eadd38eb43631b48ca1ff41d67658 = L.circleMarker(
+                [50.9346658, 7.550061],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_44d88de9b966ccf27bf0c741aeb25a5b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d68f5125d1efbb970429711112a82ffa = $(`<div id="html_d68f5125d1efbb970429711112a82ffa" style="width: 100.0%; height: 100.0%;">             <b>Eichenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.934666, Lon: 7.550061</small>             </div>`)[0];
+                popup_44d88de9b966ccf27bf0c741aeb25a5b.setContent(html_d68f5125d1efbb970429711112a82ffa);
+            
+        
+
+        circle_marker_e34eadd38eb43631b48ca1ff41d67658.bindPopup(popup_44d88de9b966ccf27bf0c741aeb25a5b)
+        ;
+
+        
+    
+    
+            circle_marker_e34eadd38eb43631b48ca1ff41d67658.bindTooltip(
+                `<div>
+                     Eichenweg (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8742014421c3775474b4fcf9cd53086b = L.circleMarker(
+                [50.9242316, 7.5502449],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_cfa75b99e2e908f3a9bd09a0c225eff5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_30cf7d6ceb6d6f7a5d787b59a11a7638 = $(`<div id="html_30cf7d6ceb6d6f7a5d787b59a11a7638" style="width: 100.0%; height: 100.0%;">             <b>Mühlenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.924232, Lon: 7.550245</small>             </div>`)[0];
+                popup_cfa75b99e2e908f3a9bd09a0c225eff5.setContent(html_30cf7d6ceb6d6f7a5d787b59a11a7638);
+            
+        
+
+        circle_marker_8742014421c3775474b4fcf9cd53086b.bindPopup(popup_cfa75b99e2e908f3a9bd09a0c225eff5)
+        ;
+
+        
+    
+    
+            circle_marker_8742014421c3775474b4fcf9cd53086b.bindTooltip(
+                `<div>
+                     Mühlenweg (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a71a4ec53e8487d993db260ae55a459b = L.circleMarker(
+                [50.9271295, 7.5511704],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_bfc27d7642b9094a9fa0c0f6e73f3d72 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_553a635d5eae07efc565a752e3d2a08f = $(`<div id="html_553a635d5eae07efc565a752e3d2a08f" style="width: 100.0%; height: 100.0%;">             <b>Taubenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.927129, Lon: 7.551170</small>             </div>`)[0];
+                popup_bfc27d7642b9094a9fa0c0f6e73f3d72.setContent(html_553a635d5eae07efc565a752e3d2a08f);
+            
+        
+
+        circle_marker_a71a4ec53e8487d993db260ae55a459b.bindPopup(popup_bfc27d7642b9094a9fa0c0f6e73f3d72)
+        ;
+
+        
+    
+    
+            circle_marker_a71a4ec53e8487d993db260ae55a459b.bindTooltip(
+                `<div>
+                     Taubenweg (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c3fe04c046d29856a67ce788bb71d19f = L.circleMarker(
+                [50.9283811, 7.5546713],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_9b214434fc1d7781d6387d03420dff36 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7a1a08c54372716a9a3528e73153f17d = $(`<div id="html_7a1a08c54372716a9a3528e73153f17d" style="width: 100.0%; height: 100.0%;">             <b>Feuerwehrstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.928381, Lon: 7.554671</small>             </div>`)[0];
+                popup_9b214434fc1d7781d6387d03420dff36.setContent(html_7a1a08c54372716a9a3528e73153f17d);
+            
+        
+
+        circle_marker_c3fe04c046d29856a67ce788bb71d19f.bindPopup(popup_9b214434fc1d7781d6387d03420dff36)
+        ;
+
+        
+    
+    
+            circle_marker_c3fe04c046d29856a67ce788bb71d19f.bindTooltip(
+                `<div>
+                     Feuerwehrstraße (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_541a1eff2b362b93cb675ad04289765c = L.circleMarker(
+                [50.9242889, 7.554097],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_932365c89e6f1cf5a62a44dd205640fa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e267e53cbdcfdd23b4b1f565a75f54e5 = $(`<div id="html_e267e53cbdcfdd23b4b1f565a75f54e5" style="width: 100.0%; height: 100.0%;">             <b>Talstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.924289, Lon: 7.554097</small>             </div>`)[0];
+                popup_932365c89e6f1cf5a62a44dd205640fa.setContent(html_e267e53cbdcfdd23b4b1f565a75f54e5);
+            
+        
+
+        circle_marker_541a1eff2b362b93cb675ad04289765c.bindPopup(popup_932365c89e6f1cf5a62a44dd205640fa)
+        ;
+
+        
+    
+    
+            circle_marker_541a1eff2b362b93cb675ad04289765c.bindTooltip(
+                `<div>
+                     Talstraße (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8831d930811dc03b7510de381b9bcdca = L.circleMarker(
+                [50.9033978, 7.5409481],
+                {"bubblingMouseEvents": true, "color": "#45B7D1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#45B7D1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_e454169dcf9c1ecaadeeb8ddd0691667);
+        
+    
+        var popup_9b0365a03702328acfd651684ea3fa50 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5922a3a63bc111bdc67e11f3956c1c24 = $(`<div id="html_5922a3a63bc111bdc67e11f3956c1c24" style="width: 100.0%; height: 100.0%;">             <b>Hochstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 3<br>             <b>CDU-Kandidat:</b> Kandidat 3<br>             <small>Lat: 50.903398, Lon: 7.540948</small>             </div>`)[0];
+                popup_9b0365a03702328acfd651684ea3fa50.setContent(html_5922a3a63bc111bdc67e11f3956c1c24);
+            
+        
+
+        circle_marker_8831d930811dc03b7510de381b9bcdca.bindPopup(popup_9b0365a03702328acfd651684ea3fa50)
+        ;
+
+        
+    
+    
+            circle_marker_8831d930811dc03b7510de381b9bcdca.bindTooltip(
+                `<div>
+                     Hochstraße (Bezirk 3)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_e454169dcf9c1ecaadeeb8ddd0691667.addTo(map_8688aa52e076da0f1500dc79570d4f4f);
+        
+    
+            var feature_group_21320ccdb2deace38c94cc070ed35187 = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_marker_cba4e9dde94aa9efda446e6b9bd866c5 = L.circleMarker(
+                [50.9017034, 7.5447469],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_6ae2a92af28ea33d93337fa437d4736b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e0acfcc5361cf15a522b2c5b58ebfad6 = $(`<div id="html_e0acfcc5361cf15a522b2c5b58ebfad6" style="width: 100.0%; height: 100.0%;">             <b>Bornenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.901703, Lon: 7.544747</small>             </div>`)[0];
+                popup_6ae2a92af28ea33d93337fa437d4736b.setContent(html_e0acfcc5361cf15a522b2c5b58ebfad6);
+            
+        
+
+        circle_marker_cba4e9dde94aa9efda446e6b9bd866c5.bindPopup(popup_6ae2a92af28ea33d93337fa437d4736b)
+        ;
+
+        
+    
+    
+            circle_marker_cba4e9dde94aa9efda446e6b9bd866c5.bindTooltip(
+                `<div>
+                     Bornenweg (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ce485e5d938fb1c98996a2385b2e0382 = L.circleMarker(
+                [50.9011411, 7.5437799],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_8ea0e18b2d42382bfb8f34daa8796289 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a16f1a0058da390057837d19e3b50b41 = $(`<div id="html_a16f1a0058da390057837d19e3b50b41" style="width: 100.0%; height: 100.0%;">             <b>Jakob-Engels-Straße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.901141, Lon: 7.543780</small>             </div>`)[0];
+                popup_8ea0e18b2d42382bfb8f34daa8796289.setContent(html_a16f1a0058da390057837d19e3b50b41);
+            
+        
+
+        circle_marker_ce485e5d938fb1c98996a2385b2e0382.bindPopup(popup_8ea0e18b2d42382bfb8f34daa8796289)
+        ;
+
+        
+    
+    
+            circle_marker_ce485e5d938fb1c98996a2385b2e0382.bindTooltip(
+                `<div>
+                     Jakob-Engels-Straße (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ce1c700d349a1179715ca47d748e8b3d = L.circleMarker(
+                [50.9062647, 7.5436561],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_5fce7d1ce3ae8b0e3b5f3d09f1eb4077 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9645ca27bd46678a9328cdc27c7b7758 = $(`<div id="html_9645ca27bd46678a9328cdc27c7b7758" style="width: 100.0%; height: 100.0%;">             <b>Gärtnerweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.906265, Lon: 7.543656</small>             </div>`)[0];
+                popup_5fce7d1ce3ae8b0e3b5f3d09f1eb4077.setContent(html_9645ca27bd46678a9328cdc27c7b7758);
+            
+        
+
+        circle_marker_ce1c700d349a1179715ca47d748e8b3d.bindPopup(popup_5fce7d1ce3ae8b0e3b5f3d09f1eb4077)
+        ;
+
+        
+    
+    
+            circle_marker_ce1c700d349a1179715ca47d748e8b3d.bindTooltip(
+                `<div>
+                     Gärtnerweg (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bf551a20f47ff34af11a927fa874f043 = L.circleMarker(
+                [50.9061896, 7.5463694],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_499fd1710505ebc4ba70ba574db5dd8d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_73e01a5157bc223ff8c9a3fc55a280cc = $(`<div id="html_73e01a5157bc223ff8c9a3fc55a280cc" style="width: 100.0%; height: 100.0%;">             <b>Lindchenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.906190, Lon: 7.546369</small>             </div>`)[0];
+                popup_499fd1710505ebc4ba70ba574db5dd8d.setContent(html_73e01a5157bc223ff8c9a3fc55a280cc);
+            
+        
+
+        circle_marker_bf551a20f47ff34af11a927fa874f043.bindPopup(popup_499fd1710505ebc4ba70ba574db5dd8d)
+        ;
+
+        
+    
+    
+            circle_marker_bf551a20f47ff34af11a927fa874f043.bindTooltip(
+                `<div>
+                     Lindchenweg (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c29fcfc4f44da7e0f92ed15c16d5e31d = L.circleMarker(
+                [50.9032372, 7.5416675],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_c8bd6a26659c21145e7fe7a78bd957ce = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1e0a3bffa7b5b96a8c7c218cd6d70e48 = $(`<div id="html_1e0a3bffa7b5b96a8c7c218cd6d70e48" style="width: 100.0%; height: 100.0%;">             <b>Dorfplatz</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.903237, Lon: 7.541667</small>             </div>`)[0];
+                popup_c8bd6a26659c21145e7fe7a78bd957ce.setContent(html_1e0a3bffa7b5b96a8c7c218cd6d70e48);
+            
+        
+
+        circle_marker_c29fcfc4f44da7e0f92ed15c16d5e31d.bindPopup(popup_c8bd6a26659c21145e7fe7a78bd957ce)
+        ;
+
+        
+    
+    
+            circle_marker_c29fcfc4f44da7e0f92ed15c16d5e31d.bindTooltip(
+                `<div>
+                     Dorfplatz (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_712e38fd5ffe6e9b931e93cdcd605ce2 = L.circleMarker(
+                [50.902855, 7.534771],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_d776c3cd330d28c700633192d9e96637 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2845528e041ee1f6edfe34cea320b7a0 = $(`<div id="html_2845528e041ee1f6edfe34cea320b7a0" style="width: 100.0%; height: 100.0%;">             <b>Glockenblumenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.902855, Lon: 7.534771</small>             </div>`)[0];
+                popup_d776c3cd330d28c700633192d9e96637.setContent(html_2845528e041ee1f6edfe34cea320b7a0);
+            
+        
+
+        circle_marker_712e38fd5ffe6e9b931e93cdcd605ce2.bindPopup(popup_d776c3cd330d28c700633192d9e96637)
+        ;
+
+        
+    
+    
+            circle_marker_712e38fd5ffe6e9b931e93cdcd605ce2.bindTooltip(
+                `<div>
+                     Glockenblumenweg (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9bb6d4e4baa5911ddd99e6585ea98359 = L.circleMarker(
+                [50.9027287, 7.5363904],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_c88f6ce5d85adabb9cc03ea5fe7f6323 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_20c911227ab6710a80d760ead7175100 = $(`<div id="html_20c911227ab6710a80d760ead7175100" style="width: 100.0%; height: 100.0%;">             <b>Kornblumenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.902729, Lon: 7.536390</small>             </div>`)[0];
+                popup_c88f6ce5d85adabb9cc03ea5fe7f6323.setContent(html_20c911227ab6710a80d760ead7175100);
+            
+        
+
+        circle_marker_9bb6d4e4baa5911ddd99e6585ea98359.bindPopup(popup_c88f6ce5d85adabb9cc03ea5fe7f6323)
+        ;
+
+        
+    
+    
+            circle_marker_9bb6d4e4baa5911ddd99e6585ea98359.bindTooltip(
+                `<div>
+                     Kornblumenweg (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_17d1f6f76cf30adee3e66bab51f581ed = L.circleMarker(
+                [50.9026605, 7.5391761],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_cf0b1aee3aa0dc170da50fbca2bb6f57 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9aca817c2d27b688a1cd0fd86238f762 = $(`<div id="html_9aca817c2d27b688a1cd0fd86238f762" style="width: 100.0%; height: 100.0%;">             <b>Marktstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.902661, Lon: 7.539176</small>             </div>`)[0];
+                popup_cf0b1aee3aa0dc170da50fbca2bb6f57.setContent(html_9aca817c2d27b688a1cd0fd86238f762);
+            
+        
+
+        circle_marker_17d1f6f76cf30adee3e66bab51f581ed.bindPopup(popup_cf0b1aee3aa0dc170da50fbca2bb6f57)
+        ;
+
+        
+    
+    
+            circle_marker_17d1f6f76cf30adee3e66bab51f581ed.bindTooltip(
+                `<div>
+                     Marktstraße (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fc8e0ed090c5d580c404a58d52a247a6 = L.circleMarker(
+                [50.9012939, 7.538464],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_f29b1bc2b10b429e303d119a0105bd83 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b3ec29c6aacafcd9c8363e160b539803 = $(`<div id="html_b3ec29c6aacafcd9c8363e160b539803" style="width: 100.0%; height: 100.0%;">             <b>Schulstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.901294, Lon: 7.538464</small>             </div>`)[0];
+                popup_f29b1bc2b10b429e303d119a0105bd83.setContent(html_b3ec29c6aacafcd9c8363e160b539803);
+            
+        
+
+        circle_marker_fc8e0ed090c5d580c404a58d52a247a6.bindPopup(popup_f29b1bc2b10b429e303d119a0105bd83)
+        ;
+
+        
+    
+    
+            circle_marker_fc8e0ed090c5d580c404a58d52a247a6.bindTooltip(
+                `<div>
+                     Schulstraße (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2ce700b9483dc00c899d48525c75d899 = L.circleMarker(
+                [50.9017904, 7.5330314],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_f279ec5d4d9ff426464b467a8cfead67 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6ca5529444651e85ca165033398c1445 = $(`<div id="html_6ca5529444651e85ca165033398c1445" style="width: 100.0%; height: 100.0%;">             <b>Arnikaweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.901790, Lon: 7.533031</small>             </div>`)[0];
+                popup_f279ec5d4d9ff426464b467a8cfead67.setContent(html_6ca5529444651e85ca165033398c1445);
+            
+        
+
+        circle_marker_2ce700b9483dc00c899d48525c75d899.bindPopup(popup_f279ec5d4d9ff426464b467a8cfead67)
+        ;
+
+        
+    
+    
+            circle_marker_2ce700b9483dc00c899d48525c75d899.bindTooltip(
+                `<div>
+                     Arnikaweg (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8763efdbce8b62868b3fe2664399437c = L.circleMarker(
+                [50.8996112, 7.5347881],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_e4d42d263b5d92821f5bdb0058f77dad = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_72848d0c80f14c6361b8720a64743d6d = $(`<div id="html_72848d0c80f14c6361b8720a64743d6d" style="width: 100.0%; height: 100.0%;">             <b>Lupinenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.899611, Lon: 7.534788</small>             </div>`)[0];
+                popup_e4d42d263b5d92821f5bdb0058f77dad.setContent(html_72848d0c80f14c6361b8720a64743d6d);
+            
+        
+
+        circle_marker_8763efdbce8b62868b3fe2664399437c.bindPopup(popup_e4d42d263b5d92821f5bdb0058f77dad)
+        ;
+
+        
+    
+    
+            circle_marker_8763efdbce8b62868b3fe2664399437c.bindTooltip(
+                `<div>
+                     Lupinenweg (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2d03936d17841096016836ca433e0590 = L.circleMarker(
+                [50.8994564, 7.5361382],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_ddf481b578cc77584585f52f8d31af38 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_525f11107504adaea18f6221e39ac846 = $(`<div id="html_525f11107504adaea18f6221e39ac846" style="width: 100.0%; height: 100.0%;">             <b>Narzissenweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.899456, Lon: 7.536138</small>             </div>`)[0];
+                popup_ddf481b578cc77584585f52f8d31af38.setContent(html_525f11107504adaea18f6221e39ac846);
+            
+        
+
+        circle_marker_2d03936d17841096016836ca433e0590.bindPopup(popup_ddf481b578cc77584585f52f8d31af38)
+        ;
+
+        
+    
+    
+            circle_marker_2d03936d17841096016836ca433e0590.bindTooltip(
+                `<div>
+                     Narzissenweg (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0f95806c14cb9fffa52d8f1adb3a99a4 = L.circleMarker(
+                [50.9010308, 7.5350121],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_4acb1eb24c9d77a2d70561def310d199 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_57861c432063e27ab25fa6bcd189aa30 = $(`<div id="html_57861c432063e27ab25fa6bcd189aa30" style="width: 100.0%; height: 100.0%;">             <b>Thymianweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.901031, Lon: 7.535012</small>             </div>`)[0];
+                popup_4acb1eb24c9d77a2d70561def310d199.setContent(html_57861c432063e27ab25fa6bcd189aa30);
+            
+        
+
+        circle_marker_0f95806c14cb9fffa52d8f1adb3a99a4.bindPopup(popup_4acb1eb24c9d77a2d70561def310d199)
+        ;
+
+        
+    
+    
+            circle_marker_0f95806c14cb9fffa52d8f1adb3a99a4.bindTooltip(
+                `<div>
+                     Thymianweg (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_53cedfc8f7e212cdb1b4c9e22939736c = L.circleMarker(
+                [50.9307522, 7.5533574],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_7885f9001dbe76fc7c9a58eedc4a7706 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ac3d5d692576a06b2f5e6458567f32ce = $(`<div id="html_ac3d5d692576a06b2f5e6458567f32ce" style="width: 100.0%; height: 100.0%;">             <b>Ahornweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.930752, Lon: 7.553357</small>             </div>`)[0];
+                popup_7885f9001dbe76fc7c9a58eedc4a7706.setContent(html_ac3d5d692576a06b2f5e6458567f32ce);
+            
+        
+
+        circle_marker_53cedfc8f7e212cdb1b4c9e22939736c.bindPopup(popup_7885f9001dbe76fc7c9a58eedc4a7706)
+        ;
+
+        
+    
+    
+            circle_marker_53cedfc8f7e212cdb1b4c9e22939736c.bindTooltip(
+                `<div>
+                     Ahornweg (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_76521d3b2c560edfd3fc4346b538104e = L.circleMarker(
+                [50.9339978, 7.5532432],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_bbf6f078fbec60fd3b957515f7a76ab0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_71945780803014ac514ddf0fd509db85 = $(`<div id="html_71945780803014ac514ddf0fd509db85" style="width: 100.0%; height: 100.0%;">             <b>Jürgesweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.933998, Lon: 7.553243</small>             </div>`)[0];
+                popup_bbf6f078fbec60fd3b957515f7a76ab0.setContent(html_71945780803014ac514ddf0fd509db85);
+            
+        
+
+        circle_marker_76521d3b2c560edfd3fc4346b538104e.bindPopup(popup_bbf6f078fbec60fd3b957515f7a76ab0)
+        ;
+
+        
+    
+    
+            circle_marker_76521d3b2c560edfd3fc4346b538104e.bindTooltip(
+                `<div>
+                     Jürgesweg (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_328fef03bc822e0d3b442539db074f7d = L.circleMarker(
+                [50.9330547, 7.5517515],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_cca3502d4505465084071276b7e4dc15 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1f92c74906df65dc9728b56e446a7767 = $(`<div id="html_1f92c74906df65dc9728b56e446a7767" style="width: 100.0%; height: 100.0%;">             <b>Seinscheweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.933055, Lon: 7.551751</small>             </div>`)[0];
+                popup_cca3502d4505465084071276b7e4dc15.setContent(html_1f92c74906df65dc9728b56e446a7767);
+            
+        
+
+        circle_marker_328fef03bc822e0d3b442539db074f7d.bindPopup(popup_cca3502d4505465084071276b7e4dc15)
+        ;
+
+        
+    
+    
+            circle_marker_328fef03bc822e0d3b442539db074f7d.bindTooltip(
+                `<div>
+                     Seinscheweg (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1d85058af17b2f9e9d4bf55ff92f0e2a = L.circleMarker(
+                [50.9310511, 7.5561838],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_27a8901ff4cc73392333df7357a1fe25 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8d92ac4b49f68d311d0ee0235fd313f1 = $(`<div id="html_8d92ac4b49f68d311d0ee0235fd313f1" style="width: 100.0%; height: 100.0%;">             <b>Backhausweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.931051, Lon: 7.556184</small>             </div>`)[0];
+                popup_27a8901ff4cc73392333df7357a1fe25.setContent(html_8d92ac4b49f68d311d0ee0235fd313f1);
+            
+        
+
+        circle_marker_1d85058af17b2f9e9d4bf55ff92f0e2a.bindPopup(popup_27a8901ff4cc73392333df7357a1fe25)
+        ;
+
+        
+    
+    
+            circle_marker_1d85058af17b2f9e9d4bf55ff92f0e2a.bindTooltip(
+                `<div>
+                     Backhausweg (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4ee151b9698266e21b652bafe85d1dc5 = L.circleMarker(
+                [50.9274217, 7.5598845],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_c65e913e5ba80f1101a46f092e360a79 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8d71343e59df5ca489c7e0a94ddd3939 = $(`<div id="html_8d71343e59df5ca489c7e0a94ddd3939" style="width: 100.0%; height: 100.0%;">             <b>Kalksteinstraße</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.927422, Lon: 7.559884</small>             </div>`)[0];
+                popup_c65e913e5ba80f1101a46f092e360a79.setContent(html_8d71343e59df5ca489c7e0a94ddd3939);
+            
+        
+
+        circle_marker_4ee151b9698266e21b652bafe85d1dc5.bindPopup(popup_c65e913e5ba80f1101a46f092e360a79)
+        ;
+
+        
+    
+    
+            circle_marker_4ee151b9698266e21b652bafe85d1dc5.bindTooltip(
+                `<div>
+                     Kalksteinstraße (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5e9afdcd0f5886a4da21fd3a3fd38000 = L.circleMarker(
+                [50.9290052, 7.5615106],
+                {"bubblingMouseEvents": true, "color": "#FFA07A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFA07A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_21320ccdb2deace38c94cc070ed35187);
+        
+    
+        var popup_593a9ea24a0e0c90ce190779b50b31d8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_70114f408e9bbad123e4d854a5d18894 = $(`<div id="html_70114f408e9bbad123e4d854a5d18894" style="width: 100.0%; height: 100.0%;">             <b>Weißdornweg</b><br>             51588 Nümbrecht<br>             <hr>             <b>Wahlbezirk:</b> Bezirk 4<br>             <b>CDU-Kandidat:</b> Kandidat 4<br>             <small>Lat: 50.929005, Lon: 7.561511</small>             </div>`)[0];
+                popup_593a9ea24a0e0c90ce190779b50b31d8.setContent(html_70114f408e9bbad123e4d854a5d18894);
+            
+        
+
+        circle_marker_5e9afdcd0f5886a4da21fd3a3fd38000.bindPopup(popup_593a9ea24a0e0c90ce190779b50b31d8)
+        ;
+
+        
+    
+    
+            circle_marker_5e9afdcd0f5886a4da21fd3a3fd38000.bindTooltip(
+                `<div>
+                     Weißdornweg (Bezirk 4)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            feature_group_21320ccdb2deace38c94cc070ed35187.addTo(map_8688aa52e076da0f1500dc79570d4f4f);
+        
+    
+            var layer_control_210db6a2c50f1508ef41d51545d78ce9_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_bb6b149ad6f50ccd5ef58335e38660a6,
+                },
+                overlays :  {
+                    "Bezirk 1 - Kandidat 1" : feature_group_c902073e3c65f650e5c13bb2feb1166e,
+                    "Bezirk 2 - Kandidat 2" : feature_group_de8229dea331f3162f35a88a16fc63c9,
+                    "Bezirk 3 - Kandidat 3" : feature_group_e454169dcf9c1ecaadeeb8ddd0691667,
+                    "Bezirk 4 - Kandidat 4" : feature_group_21320ccdb2deace38c94cc070ed35187,
+                },
+            };
+            let layer_control_210db6a2c50f1508ef41d51545d78ce9 = L.control.layers(
+                layer_control_210db6a2c50f1508ef41d51545d78ce9_layers.base_layers,
+                layer_control_210db6a2c50f1508ef41d51545d78ce9_layers.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_8688aa52e076da0f1500dc79570d4f4f);
+
+        
+</script>
+</html>

@@ -1,0 +1,1506 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5424202,
+          50.9028266
+        ]
+      },
+      "properties": {
+        "street": "Poststraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Poststraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5423655,
+          50.8974904
+        ]
+      },
+      "properties": {
+        "street": "Amselweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Amselweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5456073,
+          50.9013511
+        ]
+      },
+      "properties": {
+        "street": "Bitzenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Bitzenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5447469,
+          50.9017034
+        ]
+      },
+      "properties": {
+        "street": "Bornenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Bornenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5492144,
+          50.9009632
+        ]
+      },
+      "properties": {
+        "street": "Dr.-Horst-Frese-Straße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Dr.-Horst-Frese-Straße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5419391,
+          50.9028606
+        ]
+      },
+      "properties": {
+        "street": "Dr.-Rieck-Straße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Dr.-Rieck-Straße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5417366,
+          50.9003195
+        ]
+      },
+      "properties": {
+        "street": "Finkenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Finkenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5437799,
+          50.9011411
+        ]
+      },
+      "properties": {
+        "street": "Jakob-Engels-Straße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Jakob-Engels-Straße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.542596,
+          50.9032281
+        ]
+      },
+      "properties": {
+        "street": "Meta-Herz-Straße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Meta-Herz-Straße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5421419,
+          50.8990181
+        ]
+      },
+      "properties": {
+        "street": "Nachtigallenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Nachtigallenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.540799,
+          50.9087167
+        ]
+      },
+      "properties": {
+        "street": "Bahnhofstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Bahnhofstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5436561,
+          50.9062647
+        ]
+      },
+      "properties": {
+        "street": "Gärtnerweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Gärtnerweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5451492,
+          50.910077
+        ]
+      },
+      "properties": {
+        "street": "Höhenstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Höhenstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5367495,
+          50.9087664
+        ]
+      },
+      "properties": {
+        "street": "Kirchweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Kirchweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5444605,
+          50.9088631
+        ]
+      },
+      "properties": {
+        "street": "Kapellenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Kapellenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5463694,
+          50.9061896
+        ]
+      },
+      "properties": {
+        "street": "Lindchenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Lindchenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.542955,
+          50.9035481
+        ]
+      },
+      "properties": {
+        "street": "Parkstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Parkstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5448432,
+          50.9039982
+        ]
+      },
+      "properties": {
+        "street": "Weiherstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Weiherstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5345371,
+          50.9031272
+        ]
+      },
+      "properties": {
+        "street": "Anemonenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Anemonenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5416675,
+          50.9032372
+        ]
+      },
+      "properties": {
+        "street": "Dorfplatz",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Dorfplatz, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5373575,
+          50.9060209
+        ]
+      },
+      "properties": {
+        "street": "Erlenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Erlenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5407896,
+          50.9068846
+        ]
+      },
+      "properties": {
+        "street": "Feldstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Feldstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5385063,
+          50.9061651
+        ]
+      },
+      "properties": {
+        "street": "Friedhofstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Friedhofstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.534771,
+          50.902855
+        ]
+      },
+      "properties": {
+        "street": "Glockenblumenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Glockenblumenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5326207,
+          50.9038696
+        ]
+      },
+      "properties": {
+        "street": "Gouvieuxstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Gouvieuxstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5409326,
+          50.9020173
+        ]
+      },
+      "properties": {
+        "street": "Hauptstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Hauptstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5369569,
+          50.9022486
+        ]
+      },
+      "properties": {
+        "street": "Heckenrosenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Heckenrosenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5363904,
+          50.9027287
+        ]
+      },
+      "properties": {
+        "street": "Kornblumenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Kornblumenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5385338,
+          50.9042478
+        ]
+      },
+      "properties": {
+        "street": "Leo-Baer-Straße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Leo-Baer-Straße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5376838,
+          50.9023145
+        ]
+      },
+      "properties": {
+        "street": "Lilienweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Lilienweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5414121,
+          50.9030022
+        ]
+      },
+      "properties": {
+        "street": "Lina-Friedrichs-Straße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Lina-Friedrichs-Straße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5391761,
+          50.9026605
+        ]
+      },
+      "properties": {
+        "street": "Marktstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Marktstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5360799,
+          50.9041152
+        ]
+      },
+      "properties": {
+        "street": "Mateh-Yehuda-Straße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Mateh-Yehuda-Straße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5335673,
+          50.9029227
+        ]
+      },
+      "properties": {
+        "street": "Rotkleeweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Rotkleeweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5300129,
+          50.9030093
+        ]
+      },
+      "properties": {
+        "street": "Sängertsweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Sängertsweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.538464,
+          50.9012939
+        ]
+      },
+      "properties": {
+        "street": "Schulstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Schulstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5410559,
+          50.9026286
+        ]
+      },
+      "properties": {
+        "street": "Schustergasse",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Schustergasse, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.537209,
+          50.9057286
+        ]
+      },
+      "properties": {
+        "street": "Wiesenstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Wiesenstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5362535,
+          50.9023653
+        ]
+      },
+      "properties": {
+        "street": "Akeleiweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Akeleiweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5330314,
+          50.9017904
+        ]
+      },
+      "properties": {
+        "street": "Arnikaweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Arnikaweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5330299,
+          50.9012113
+        ]
+      },
+      "properties": {
+        "street": "Fingerhutweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Fingerhutweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5323643,
+          50.9023403
+        ]
+      },
+      "properties": {
+        "street": "Goldnesselweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Goldnesselweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5333604,
+          50.8982713
+        ]
+      },
+      "properties": {
+        "street": "Holunderweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Holunderweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5347881,
+          50.8996112
+        ]
+      },
+      "properties": {
+        "street": "Lupinenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Lupinenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.532058,
+          50.902156
+        ]
+      },
+      "properties": {
+        "street": "Maiglöckchenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Maiglöckchenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5329861,
+          50.9018758
+        ]
+      },
+      "properties": {
+        "street": "Margeritenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Margeritenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5351828,
+          50.9019175
+        ]
+      },
+      "properties": {
+        "street": "Mohnweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Mohnweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5361382,
+          50.8994564
+        ]
+      },
+      "properties": {
+        "street": "Narzissenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Narzissenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5369443,
+          50.8997293
+        ]
+      },
+      "properties": {
+        "street": "Orchideenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Orchideenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5368298,
+          50.9011471
+        ]
+      },
+      "properties": {
+        "street": "Schlüsselblumenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Schlüsselblumenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5386394,
+          50.9006075
+        ]
+      },
+      "properties": {
+        "street": "Schmiedeweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Schmiedeweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5350121,
+          50.9010308
+        ]
+      },
+      "properties": {
+        "street": "Thymianweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Thymianweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5327291,
+          50.9025612
+        ]
+      },
+      "properties": {
+        "street": "Veilchenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Veilchenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5337845,
+          50.8992156
+        ]
+      },
+      "properties": {
+        "street": "Wildrosenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Wildrosenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5409481,
+          50.9033978
+        ]
+      },
+      "properties": {
+        "street": "Göpring",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Göpring, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5533574,
+          50.9307522
+        ]
+      },
+      "properties": {
+        "street": "Ahornweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Ahornweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5497141,
+          50.9292704
+        ]
+      },
+      "properties": {
+        "street": "Denkmalweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Denkmalweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.553004,
+          50.9276375
+        ]
+      },
+      "properties": {
+        "street": "Drosselweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Drosselweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.550061,
+          50.9346658
+        ]
+      },
+      "properties": {
+        "street": "Eichenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Eichenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5532432,
+          50.9339978
+        ]
+      },
+      "properties": {
+        "street": "Jürgesweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Jürgesweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5550323,
+          50.9311169
+        ]
+      },
+      "properties": {
+        "street": "Kirschbaumweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Kirschbaumweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5523756,
+          50.9267758
+        ]
+      },
+      "properties": {
+        "street": "Meisenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Meisenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5502449,
+          50.9242316
+        ]
+      },
+      "properties": {
+        "street": "Mühlenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Mühlenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5517515,
+          50.9330547
+        ]
+      },
+      "properties": {
+        "street": "Seinscheweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Seinscheweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5503435,
+          50.9264623
+        ]
+      },
+      "properties": {
+        "street": "Starenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Starenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5539544,
+          50.934432
+        ]
+      },
+      "properties": {
+        "street": "Stollenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Stollenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5511704,
+          50.9271295
+        ]
+      },
+      "properties": {
+        "street": "Taubenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Taubenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5561838,
+          50.9310511
+        ]
+      },
+      "properties": {
+        "street": "Backhausweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Backhausweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5552728,
+          50.9262787
+        ]
+      },
+      "properties": {
+        "street": "Bachstelzenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Bachstelzenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5587714,
+          50.9314732
+        ]
+      },
+      "properties": {
+        "street": "Freibadstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Freibadstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5546713,
+          50.9283811
+        ]
+      },
+      "properties": {
+        "street": "Feuerwehrstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Feuerwehrstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5598845,
+          50.9274217
+        ]
+      },
+      "properties": {
+        "street": "Kalksteinstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Kalksteinstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5660418,
+          50.9315238
+        ]
+      },
+      "properties": {
+        "street": "Kiefernweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Kiefernweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.556641,
+          50.9318558
+        ]
+      },
+      "properties": {
+        "street": "Lindenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Lindenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.554097,
+          50.9242889
+        ]
+      },
+      "properties": {
+        "street": "Talstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Talstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5615106,
+          50.9290052
+        ]
+      },
+      "properties": {
+        "street": "Weißdornweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Weißdornweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 4",
+        "kandidat": "Kandidat 4",
+        "farbe": "#FFA07A"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.585267,
+          50.90394
+        ]
+      },
+      "properties": {
+        "street": "Mühlenbergweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Mühlenbergweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Kandidat 1",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5409481,
+          50.9033978
+        ]
+      },
+      "properties": {
+        "street": "Gering",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Gering, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Kandidat 2",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5409481,
+          50.9033978
+        ]
+      },
+      "properties": {
+        "street": "Hochstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Hochstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 3",
+        "kandidat": "Kandidat 3",
+        "farbe": "#45B7D1"
+      }
+    }
+  ]
+}
