@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_15d64c4c4a583b9da86f2d84c068a0d8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <script>
+    var markers = [];
+    var markerData = [{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.903157,"longitude":7.5345047,"street":"Anemonenweg","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9087167,"longitude":7.540799,"street":"Bahnhofstra\u00dfe","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9032372,"longitude":7.5416675,"street":"Dorfplatz","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9014973,"longitude":7.5500526,"street":"Dr.","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9061651,"longitude":7.5385063,"street":"Friedhofstra\u00dfe","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9062557,"longitude":7.5436556,"street":"G\u00e4rtnerweg","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9088631,"longitude":7.5444605,"street":"Kapellenweg","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9030022,"longitude":7.5414121,"street":"Lina","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9061896,"longitude":7.5463694,"street":"Lindchenweg","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9042478,"longitude":7.5385338,"street":"Leo","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9026605,"longitude":7.5391761,"street":"Marktstra\u00dfe","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9031954,"longitude":7.5445317,"street":"Poststra\u00dfe","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9035481,"longitude":7.542955,"street":"Parkstra\u00dfe","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9012939,"longitude":7.538464,"street":"Schulstra\u00dfe","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9026286,"longitude":7.5410559,"street":"Schustergasse","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"Gisa Hauschildt","kreistagkandidat":"Marcus Schmitz","latitude":50.9039982,"longitude":7.5448432,"street":"Weiherstra\u00dfe","wbz":"WBZ 10","kandidat_farbe":"#0D47A1","kreistag_farbe":"#1976D2","wahlberechtigte":976},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9007148,"longitude":7.5364263,"street":"Akeleiweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9017368,"longitude":7.5327243,"street":"Arnikaweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9060209,"longitude":7.5373575,"street":"Erlenweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9068846,"longitude":7.5407896,"street":"Feldstra\u00dfe","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9012113,"longitude":7.5330299,"street":"Fingerhutweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.902855,"longitude":7.534771,"street":"Glockenblumenweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9036999,"longitude":7.5348045,"street":"Gouvieuxstra\u00dfe","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9023403,"longitude":7.5323643,"street":"Goldnesselweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9020173,"longitude":7.5409326,"street":"Hauptstra\u00dfe","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9022486,"longitude":7.5369569,"street":"Heckenrosenweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9087664,"longitude":7.5367495,"street":"Kirchweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9027287,"longitude":7.5363904,"street":"Kornblumenweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9023145,"longitude":7.5376838,"street":"Lilienweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.8996112,"longitude":7.5347881,"street":"Lupinenweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.902156,"longitude":7.532058,"street":"Maigl\u00f6ckchenweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9018758,"longitude":7.5329861,"street":"Margeritenweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9041152,"longitude":7.5360799,"street":"Mateh","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9019175,"longitude":7.5351828,"street":"Mohnweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.8994564,"longitude":7.5361382,"street":"Narzissenweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.8997293,"longitude":7.5369443,"street":"Orchideenweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9029227,"longitude":7.5335673,"street":"Rotkleeweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9030308,"longitude":7.5300913,"street":"S\u00e4ngertsweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9011471,"longitude":7.5368298,"street":"Schl\u00fcsselblumenweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9006075,"longitude":7.5386394,"street":"Schmiedeweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Schulbergweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9010308,"longitude":7.5350121,"street":"Thymianweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9025612,"longitude":7.5327291,"street":"Veilchenweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Waldfrieden","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9057286,"longitude":7.537209,"street":"Wiesenstra\u00dfe","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.8992156,"longitude":7.5337845,"street":"Wildrosenweg","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Zur alten Schmiede","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"J\u00f6rg Reintsema","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"alle Stra\u00dfen von Spreitgen","wbz":"WBZ 20","kandidat_farbe":"#1565C0","kreistag_farbe":"#1976D2","wahlberechtigte":956},{"kandidat":"Dagmar Schmitz","kreistagkandidat":"Thomas Schlegel","latitude":50.8974904,"longitude":7.5423655,"street":"Amselweg","wbz":"WBZ 30","kandidat_farbe":"#B71C1C","kreistag_farbe":"#D32F2F","wahlberechtigte":905},{"kandidat":"Dagmar Schmitz","kreistagkandidat":"Thomas Schlegel","latitude":50.9002009,"longitude":7.5421976,"street":"Bitzenweg","wbz":"WBZ 30","kandidat_farbe":"#B71C1C","kreistag_farbe":"#D32F2F","wahlberechtigte":905},{"kandidat":"Dagmar Schmitz","kreistagkandidat":"Thomas Schlegel","latitude":50.9017034,"longitude":7.5447469,"street":"Bornenweg","wbz":"WBZ 30","kandidat_farbe":"#B71C1C","kreistag_farbe":"#D32F2F","wahlberechtigte":905},{"kandidat":"Dagmar Schmitz","kreistagkandidat":"Thomas Schlegel","latitude":50.9000897,"longitude":7.5417516,"street":"Finkenweg","wbz":"WBZ 30","kandidat_farbe":"#B71C1C","kreistag_farbe":"#D32F2F","wahlberechtigte":905},{"kandidat":"Dagmar Schmitz","kreistagkandidat":"Thomas Schlegel","latitude":50.9033978,"longitude":7.5409481,"street":"G\u00f6pelweg","wbz":"WBZ 30","kandidat_farbe":"#B71C1C","kreistag_farbe":"#D32F2F","wahlberechtigte":905},{"kandidat":"Dagmar Schmitz","kreistagkandidat":"Thomas Schlegel","latitude":50.8982713,"longitude":7.5333604,"street":"Holunderweg","wbz":"WBZ 30","kandidat_farbe":"#B71C1C","kreistag_farbe":"#D32F2F","wahlberechtigte":905},{"kandidat":"Dagmar Schmitz","kreistagkandidat":"Thomas Schlegel","latitude":50.910077,"longitude":7.5451492,"street":"H\u00f6henstra\u00dfe","wbz":"WBZ 30","kandidat_farbe":"#B71C1C","kreistag_farbe":"#D32F2F","wahlberechtigte":905},{"kandidat":"Dagmar Schmitz","kreistagkandidat":"Thomas Schlegel","latitude":50.9011411,"longitude":7.5437799,"street":"Jakob","wbz":"WBZ 30","kandidat_farbe":"#B71C1C","kreistag_farbe":"#D32F2F","wahlberechtigte":905},{"kandidat":"Dagmar Schmitz","kreistagkandidat":"Thomas Schlegel","latitude":50.9032281,"longitude":7.542596,"street":"Meta","wbz":"WBZ 30","kandidat_farbe":"#B71C1C","kreistag_farbe":"#D32F2F","wahlberechtigte":905},{"kandidat":"Dagmar Schmitz","kreistagkandidat":"Thomas Schlegel","latitude":50.8990181,"longitude":7.5421419,"street":"Nachtigallenweg","wbz":"WBZ 30","kandidat_farbe":"#B71C1C","kreistag_farbe":"#D32F2F","wahlberechtigte":905},{"kandidat":"Dagmar Schmitz","kreistagkandidat":"Thomas Schlegel","latitude":50.8966027,"longitude":7.5880801,"street":"Oberdorf","wbz":"WBZ 30","kandidat_farbe":"#B71C1C","kreistag_farbe":"#D32F2F","wahlberechtigte":905},{"kandidat":"Dagmar Schmitz","kreistagkandidat":"Thomas Schlegel","latitude":50.9033978,"longitude":7.5409481,"street":"Zum Sonnenhof","wbz":"WBZ 30","kandidat_farbe":"#B71C1C","kreistag_farbe":"#D32F2F","wahlberechtigte":905},{"kandidat":"Dagmar Schmitz","kreistagkandidat":"Thomas Schlegel","latitude":50.9033978,"longitude":7.5409481,"street":"G\u00f6pring","wbz":"WBZ 30","kandidat_farbe":"#B71C1C","kreistag_farbe":"#D32F2F","wahlberechtigte":905},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9307522,"longitude":7.5533574,"street":"Ahornweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9310767,"longitude":7.5561357,"street":"Backhausweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9262708,"longitude":7.5552685,"street":"Bachstelzenweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9292726,"longitude":7.5497417,"street":"Denkmalweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9276417,"longitude":7.5530392,"street":"Drosselweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9346658,"longitude":7.550061,"street":"Eichenweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9295388,"longitude":7.5552516,"street":"Feuerwehrstra\u00dfe","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9314382,"longitude":7.5586862,"street":"Freibadstra\u00dfe","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9338417,"longitude":7.5531785,"street":"J\u00fcrgesweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9272876,"longitude":7.5596645,"street":"Kalksteinstra\u00dfe","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9312354,"longitude":7.5652782,"street":"Kiefernweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9311354,"longitude":7.5549689,"street":"Kirschbaumweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9318558,"longitude":7.556641,"street":"Lindenweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9268715,"longitude":7.5521083,"street":"Meisenweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9039214,"longitude":7.585114,"street":"M\u00fchlenbergweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9241987,"longitude":7.5501742,"street":"M\u00fchlenweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9332235,"longitude":7.5523718,"street":"Seinscheweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9263286,"longitude":7.5505137,"street":"Starenweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9345166,"longitude":7.5544018,"street":"Stollenweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9242424,"longitude":7.5540626,"street":"Talstra\u00dfe","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9271295,"longitude":7.5511704,"street":"Taubenweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9290406,"longitude":7.5614316,"street":"Wei\u00dfdornweg","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9033978,"longitude":7.5409481,"street":"Gering","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"J\u00f6rg Menne","kreistagkandidat":"Thomas Schlegel","latitude":50.9033978,"longitude":7.5409481,"street":"Hochstra\u00dfe","wbz":"WBZ 40","kandidat_farbe":"#C62828","kreistag_farbe":"#D32F2F","wahlberechtigte":830},{"kandidat":"Markus Lang","kreistagkandidat":"Thomas Schlegel","latitude":50.9032372,"longitude":7.5416675,"street":"Am Dorfplatz","wbz":"WBZ 50","kandidat_farbe":"#D32F2F","kreistag_farbe":"#D32F2F","wahlberechtigte":880},{"kandidat":"Markus Lang","kreistagkandidat":"Thomas Schlegel","latitude":50.9033978,"longitude":7.5409481,"street":"Arndtstra\u00dfe","wbz":"WBZ 50","kandidat_farbe":"#D32F2F","kreistag_farbe":"#D32F2F","wahlberechtigte":880},{"kandidat":"Markus Lang","kreistagkandidat":"Thomas Schlegel","latitude":50.9182491,"longitude":7.5647814,"street":"Buchenweg","wbz":"WBZ 50","kandidat_farbe":"#D32F2F","kreistag_farbe":"#D32F2F","wahlberechtigte":880},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9039214,"longitude":7.585114,"street":"Am M\u00fchlenberg","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Antoniusweg","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Auf dem B\u00fchl","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Auf dem Wahn","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Burgstra\u00dfe","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.8608094,"longitude":7.5396501,"street":"Gr\u00fcner Weg","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"H\u00f6ckelsbergweg","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Im M\u00fchlengrund","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Kirchberg","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"M\u00f6nchsheide","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Oberste Gasse","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9124016,"longitude":7.5313357,"street":"Postweg","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Raiffeisenstra\u00dfe","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Schlesierweg","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.8794142,"longitude":7.5089997,"street":"Steeg","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Steinbruchweg","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Stich","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Ulfenbach","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Wiesenweg","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Wilhelmstra\u00dfe","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Zur alten Burg","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Zur Flur","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Ulrike Herrgesell","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Zur Seifen","wbz":"WBZ 60","kandidat_farbe":"#1976D2","kreistag_farbe":"#1976D2","wahlberechtigte":891},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9256591,"longitude":7.555249,"street":"Am Bierenbach","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9022118,"longitude":7.5936675,"street":"Am Sportplatz","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9133761,"longitude":7.5027602,"street":"Am Weiher","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"An den Fischteichen","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Berghausen","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.907246,"longitude":7.5935915,"street":"Birkenweg","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Bruchweg","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"B\u00fchlweg","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Gierzhagener Stra\u00dfe","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Gr\u00fcnweg","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Handweg","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Herrenwiese","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Im Kreuzfeld","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"M\u00fchlenstra\u00dfe","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Ortsweg","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Pfarrweg","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Thomas Hellbusch","kreistagkandidat":"Marcus Schmitz","latitude":50.8652311,"longitude":7.5475833,"street":"Ringstra\u00dfe","wbz":"WBZ 70","kandidat_farbe":"#1E88E5","kreistag_farbe":"#1976D2","wahlberechtigte":932},{"kandidat":"Bj\u00f6rn Dittich","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Zur Delle","wbz":"WBZ 110","kandidat_farbe":"#90CAF9","kreistag_farbe":"#1976D2","wahlberechtigte":900},{"kandidat":"Stephan R\u00fchl","kreistagkandidat":"Thomas Schlegel","latitude":50.9033978,"longitude":7.5409481,"street":"Benroth\/Berkenroth (Ortszentrum)","wbz":"WBZ 130","kandidat_farbe":"#F44336","kreistag_farbe":"#D32F2F","wahlberechtigte":912},{"kandidat":"Frank Schmitz","kreistagkandidat":"Thomas Schlegel","latitude":50.87,"longitude":7.53,"street":"Marienberghausen (Ortszentrum)","wbz":"WBZ 150","kandidat_farbe":"#E57373","kreistag_farbe":"#D32F2F","wahlberechtigte":931},{"kandidat":"Manfred Henry Daub","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Oberbreidenbach\/Prombach (Ortszentrum)","wbz":"WBZ 90","kandidat_farbe":"#42A5F5","kreistag_farbe":"#1976D2","wahlberechtigte":859},{"kandidat":"Christopher Seinsche","kreistagkandidat":"Marcus Schmitz","latitude":50.918,"longitude":7.595,"street":"Winterborn (Ortszentrum)","wbz":"WBZ 100","kandidat_farbe":"#64B5F6","kreistag_farbe":"#1976D2","wahlberechtigte":906},{"kandidat":"Titzian Crisci","kreistagkandidat":"Thomas Schlegel","latitude":50.915,"longitude":7.565,"street":"H\u00f6mel (Ortszentrum)","wbz":"WBZ 120","kandidat_farbe":"#E53935","kreistag_farbe":"#D32F2F","wahlberechtigte":872},{"kandidat":"Thomas Schlegel","kreistagkandidat":"Thomas Schlegel","latitude":50.86,"longitude":7.54,"street":"Elsenroth (Ortszentrum)","wbz":"WBZ 160","kandidat_farbe":"#EF9A9A","kreistag_farbe":"#D32F2F","wahlberechtigte":946},{"kandidat":"Roger Adolphs","kreistagkandidat":"Thomas Schlegel","latitude":50.885,"longitude":7.545,"street":"Harscheid (Ortszentrum)","wbz":"WBZ 140","kandidat_farbe":"#EF5350","kreistag_farbe":"#D32F2F","wahlberechtigte":940},{"kandidat":"Philipp Beck","kreistagkandidat":"Marcus Schmitz","latitude":50.9033978,"longitude":7.5409481,"street":"Gaderoth\/Breunfeld (Ortszentrum)","wbz":"WBZ 80","kandidat_farbe":"#2196F3","kreistag_farbe":"#1976D2","wahlberechtigte":849}];
+    var kreistagskandidaten = {"Marcus Schmitz": ["Gisa Hauschildt", "J\u00f6rg Reintsema", "Ulrike Herrgesell", "Thomas Hellbusch", "Philipp Beck", "Manfred Henry Daub", "Christopher Seinsche", "Bj\u00f6rn Dittich"], "Thomas Schlegel": ["Dagmar Schmitz", "J\u00f6rg Menne", "Markus Lang", "Titzian Crisci", "Stephan R\u00fchl", "Roger Adolphs", "Frank Schmitz", "Thomas Schlegel"]};
+    var mymap = null;
+    
+    // Warte bis Karte geladen ist
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            initMap();
+        }, 500);
+    });
+    
+    function initMap() {
+        // Finde Leaflet-Karte
+        var mapElements = document.getElementsByClassName('folium-map');
+        if (mapElements.length > 0) {
+            var mapId = mapElements[0].id;
+            mymap = window[mapId];
+            
+            if (!mymap) {
+                console.error('Karte nicht gefunden!');
+                return;
+            }
+            
+            console.log('Karte gefunden, erstelle Marker...');
+            
+            // Erstelle alle Marker
+            markerData.forEach(function(data, index) {
+                var marker = L.circleMarker([data.latitude, data.longitude], {
+                    radius: 8,
+                    color: data.kreistag_farbe,
+                    fillColor: data.kandidat_farbe,
+                    fillOpacity: 0.8,
+                    weight: 3
+                });
+                
+                var popupContent = '<div style="font-family: Arial; width: 250px;">' +
+                    '<b>' + data.street + '</b><br>' +
+                    'Wahlbezirk: ' + data.wbz + '<br>' +
+                    'Kandidat: ' + data.kandidat + '<br>' +
+                    'Kreistagkandidat: <b style="color: ' + data.kreistag_farbe + '">' + data.kreistagkandidat + '</b><br>' +
+                    'Wahlberechtigte: ' + data.wahlberechtigte +
+                    '</div>';
+                
+                marker.bindPopup(popupContent);
+                marker.bindTooltip(data.street + ' (' + data.wbz + ')');
+                
+                // Speichere Referenz
+                marker._customData = {
+                    kandidat: data.kandidat,
+                    kreistagkandidat: data.kreistagkandidat,
+                    index: index
+                };
+                
+                marker.addTo(mymap);
+                markers.push(marker);
+            });
+            
+            console.log('Erstellt: ' + markers.length + ' Marker');
+            updateStatus();
+        } else {
+            console.error('Keine Karte gefunden!');
+        }
+    }
+    
+    function showOnlyMarcus() {
+        console.log('Zeige nur Marcus Schmitz');
+        markers.forEach(function(marker) {
+            if (marker._customData.kreistagkandidat === 'Marcus Schmitz') {
+                marker.addTo(mymap);
+            } else {
+                mymap.removeLayer(marker);
+            }
+        });
+        
+        // Update Checkboxen
+        document.querySelectorAll('.kandidat-check').forEach(function(cb) {
+            var kandidat = cb.getAttribute('data-kandidat');
+            cb.checked = kreistagskandidaten['Marcus Schmitz'].includes(kandidat);
+        });
+        
+        document.getElementById('group-marcus').checked = true;
+        document.getElementById('group-thomas').checked = false;
+        
+        updateStatus();
+    }
+    
+    function showOnlyThomas() {
+        console.log('Zeige nur Thomas Schlegel');
+        markers.forEach(function(marker) {
+            if (marker._customData.kreistagkandidat === 'Thomas Schlegel') {
+                marker.addTo(mymap);
+            } else {
+                mymap.removeLayer(marker);
+            }
+        });
+        
+        // Update Checkboxen
+        document.querySelectorAll('.kandidat-check').forEach(function(cb) {
+            var kandidat = cb.getAttribute('data-kandidat');
+            cb.checked = kreistagskandidaten['Thomas Schlegel'].includes(kandidat);
+        });
+        
+        document.getElementById('group-marcus').checked = false;
+        document.getElementById('group-thomas').checked = true;
+        
+        updateStatus();
+    }
+    
+    function showAll() {
+        console.log('Zeige alle Marker');
+        markers.forEach(function(marker) {
+            marker.addTo(mymap);
+        });
+        
+        document.querySelectorAll('.kandidat-check').forEach(function(cb) {
+            cb.checked = true;
+        });
+        document.getElementById('group-marcus').checked = true;
+        document.getElementById('group-thomas').checked = true;
+        
+        updateStatus();
+    }
+    
+    function hideAll() {
+        console.log('Verstecke alle Marker');
+        markers.forEach(function(marker) {
+            mymap.removeLayer(marker);
+        });
+        
+        document.querySelectorAll('.kandidat-check').forEach(function(cb) {
+            cb.checked = false;
+        });
+        document.getElementById('group-marcus').checked = false;
+        document.getElementById('group-thomas').checked = false;
+        
+        updateStatus();
+    }
+    
+    function toggleKandidat(kandidat, show) {
+        console.log('Toggle Kandidat:', kandidat, show);
+        markers.forEach(function(marker) {
+            if (marker._customData.kandidat === kandidat) {
+                if (show) {
+                    marker.addTo(mymap);
+                } else {
+                    mymap.removeLayer(marker);
+                }
+            }
+        });
+        updateGroupCheckbox();
+        updateStatus();
+    }
+    
+    function toggleGroup(group, show) {
+        console.log('Toggle Gruppe:', group, show);
+        var kandidaten = group === 'marcus' ? kreistagskandidaten['Marcus Schmitz'] : kreistagskandidaten['Thomas Schlegel'];
+        
+        kandidaten.forEach(function(kandidat) {
+            var checkbox = document.querySelector('.kandidat-check[data-kandidat="' + kandidat + '"]');
+            if (checkbox) {
+                checkbox.checked = show;
+                toggleKandidat(kandidat, show);
+            }
+        });
+    }
+    
+    function updateGroupCheckbox() {
+        // Marcus Gruppe
+        var marcusKandidaten = kreistagskandidaten['Marcus Schmitz'];
+        var marcusAllChecked = true;
+        marcusKandidaten.forEach(function(kandidat) {
+            var cb = document.querySelector('.kandidat-check[data-kandidat="' + kandidat + '"]');
+            if (cb && !cb.checked) marcusAllChecked = false;
+        });
+        document.getElementById('group-marcus').checked = marcusAllChecked;
+        
+        // Thomas Gruppe
+        var thomasKandidaten = kreistagskandidaten['Thomas Schlegel'];
+        var thomasAllChecked = true;
+        thomasKandidaten.forEach(function(kandidat) {
+            var cb = document.querySelector('.kandidat-check[data-kandidat="' + kandidat + '"]');
+            if (cb && !cb.checked) thomasAllChecked = false;
+        });
+        document.getElementById('group-thomas').checked = thomasAllChecked;
+    }
+    
+    function updateStatus() {
+        var total = markers.length;
+        var visible = 0;
+        markers.forEach(function(marker) {
+            if (mymap && mymap.hasLayer(marker)) {
+                visible++;
+            }
+        });
+        
+        var text = '';
+        if (visible === 0) {
+            text = 'Keine Punkte sichtbar';
+        } else if (visible === total) {
+            text = 'Alle ' + total + ' Punkte sichtbar';
+        } else {
+            text = visible + ' von ' + total + ' Punkten sichtbar';
+        }
+        
+        document.getElementById('status-text').innerHTML = text;
+    }
+    </script>
+    
+    
+    <div id="control-panel" style="position: fixed; 
+                bottom: 20px; right: 20px; width: 500px;
+                background-color: white; z-index: 1000; 
+                border: 3px solid #333; border-radius: 10px;
+                box-shadow: 0 0 25px rgba(0,0,0,0.4);
+                font-family: Arial, sans-serif;">
+        
+        <div style="background: linear-gradient(135deg, #1976D2 0%, #D32F2F 100%); 
+                    color: white; padding: 15px; border-radius: 7px 7px 0 0;">
+            <h3 style="margin: 0; font-size: 20px; text-align: center;">
+                CDU Wahlbezirke Nümbrecht 2024
+            </h3>
+        </div>
+        
+        <div style="padding: 20px; max-height: 600px; overflow-y: auto;">
+            
+            <!-- Kreistagskandidaten -->
+            <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                <h4 style="margin: 0 0 15px 0;">🏛️ Kreistagskandidaten</h4>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <button onclick="showOnlyMarcus()" 
+                            style="padding: 12px; background: #1976D2; color: white; 
+                                   border: none; border-radius: 6px; cursor: pointer; 
+                                   font-weight: bold;">
+                        NUR Marcus Schmitz<br>
+                        <small>8 Bezirke</small>
+                    </button>
+                    <button onclick="showOnlyThomas()" 
+                            style="padding: 12px; background: #D32F2F; color: white; 
+                                   border: none; border-radius: 6px; cursor: pointer; 
+                                   font-weight: bold;">
+                        NUR Thomas Schlegel<br>
+                        <small>8 Bezirke</small>
+                    </button>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+                    <button onclick="showAll()" 
+                            style="padding: 10px; background: #4CAF50; color: white; 
+                                   border: none; border-radius: 6px; cursor: pointer;">
+                        ✓ Alle anzeigen
+                    </button>
+                    <button onclick="hideAll()" 
+                            style="padding: 10px; background: #f44336; color: white; 
+                                   border: none; border-radius: 6px; cursor: pointer;">
+                        ✗ Alle ausblenden
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Kandidaten -->
+            <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                <h4 style="margin: 0 0 10px 0;">✅ Einzelne Kandidaten</h4>
+                
+                <!-- Marcus Gruppe -->
+                <div style="margin-bottom: 15px;">
+                    <label style="font-weight: bold; color: #1976D2;">
+                        <input type="checkbox" id="group-marcus" checked 
+                               onchange="toggleGroup('marcus', this.checked)">
+                        Marcus Schmitz Gruppe
+                    </label>
+                    <div style="padding-left: 20px; margin-top: 5px;">
+    
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Gisa Hauschildt" checked
+                                   onchange="toggleKandidat('Gisa Hauschildt', this.checked)">
+                            Gisa Hauschildt (16)
+                        </label>
+        
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Jörg Reintsema" checked
+                                   onchange="toggleKandidat('Jörg Reintsema', this.checked)">
+                            Jörg Reintsema (32)
+                        </label>
+        
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Ulrike Herrgesell" checked
+                                   onchange="toggleKandidat('Ulrike Herrgesell', this.checked)">
+                            Ulrike Herrgesell (23)
+                        </label>
+        
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Thomas Hellbusch" checked
+                                   onchange="toggleKandidat('Thomas Hellbusch', this.checked)">
+                            Thomas Hellbusch (17)
+                        </label>
+        
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Philipp Beck" checked
+                                   onchange="toggleKandidat('Philipp Beck', this.checked)">
+                            Philipp Beck (1)
+                        </label>
+        
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Manfred Henry Daub" checked
+                                   onchange="toggleKandidat('Manfred Henry Daub', this.checked)">
+                            Manfred Henry Daub (1)
+                        </label>
+        
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Christopher Seinsche" checked
+                                   onchange="toggleKandidat('Christopher Seinsche', this.checked)">
+                            Christopher Seinsche (1)
+                        </label>
+        
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Björn Dittich" checked
+                                   onchange="toggleKandidat('Björn Dittich', this.checked)">
+                            Björn Dittich (1)
+                        </label>
+        
+                    </div>
+                </div>
+                
+                <!-- Thomas Gruppe -->
+                <div>
+                    <label style="font-weight: bold; color: #D32F2F;">
+                        <input type="checkbox" id="group-thomas" checked 
+                               onchange="toggleGroup('thomas', this.checked)">
+                        Thomas Schlegel Gruppe
+                    </label>
+                    <div style="padding-left: 20px; margin-top: 5px;">
+    
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Dagmar Schmitz" checked
+                                   onchange="toggleKandidat('Dagmar Schmitz', this.checked)">
+                            Dagmar Schmitz (13)
+                        </label>
+        
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Jörg Menne" checked
+                                   onchange="toggleKandidat('Jörg Menne', this.checked)">
+                            Jörg Menne (24)
+                        </label>
+        
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Markus Lang" checked
+                                   onchange="toggleKandidat('Markus Lang', this.checked)">
+                            Markus Lang (3)
+                        </label>
+        
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Titzian Crisci" checked
+                                   onchange="toggleKandidat('Titzian Crisci', this.checked)">
+                            Titzian Crisci (1)
+                        </label>
+        
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Stephan Rühl" checked
+                                   onchange="toggleKandidat('Stephan Rühl', this.checked)">
+                            Stephan Rühl (1)
+                        </label>
+        
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Roger Adolphs" checked
+                                   onchange="toggleKandidat('Roger Adolphs', this.checked)">
+                            Roger Adolphs (1)
+                        </label>
+        
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Frank Schmitz" checked
+                                   onchange="toggleKandidat('Frank Schmitz', this.checked)">
+                            Frank Schmitz (1)
+                        </label>
+        
+                        <label style="display: block; margin: 3px 0;">
+                            <input type="checkbox" class="kandidat-check" 
+                                   data-kandidat="Thomas Schlegel" checked
+                                   onchange="toggleKandidat('Thomas Schlegel', this.checked)">
+                            Thomas Schlegel (1)
+                        </label>
+        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Status -->
+            <div style="margin-top: 15px; padding: 10px; background: #e8f5e9; 
+                        border-radius: 6px; text-align: center;">
+                <span id="status-text" style="color: #2e7d32; font-weight: bold;">
+                    Initialisiere...
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_15d64c4c4a583b9da86f2d84c068a0d8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_15d64c4c4a583b9da86f2d84c068a0d8 = L.map(
+                "map_15d64c4c4a583b9da86f2d84c068a0d8",
+                {
+                    center: [50.906301221897806, 7.544123081751826],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: true,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cb7090cdf8b14c01b7fa6deb9a0c05e8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_cb7090cdf8b14c01b7fa6deb9a0c05e8.addTo(map_15d64c4c4a583b9da86f2d84c068a0d8);
+        
+</script>
+</html>
