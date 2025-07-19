@@ -16,7 +16,7 @@
         "city": "Nümbrecht",
         "full_address": "Poststraße, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -35,7 +35,7 @@
         "city": "Nümbrecht",
         "full_address": "Amselweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -44,8 +44,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5456073,
-          50.9013511
+          7.5457653,
+          50.9014962
         ]
       },
       "properties": {
@@ -53,9 +53,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Bitzenweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -72,9 +72,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Bornenweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -82,8 +82,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5492144,
-          50.9009632
+          7.5500526,
+          50.9014973
         ]
       },
       "properties": {
@@ -92,7 +92,7 @@
         "city": "Nümbrecht",
         "full_address": "Dr.-Horst-Frese-Straße, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -111,7 +111,7 @@
         "city": "Nümbrecht",
         "full_address": "Dr.-Rieck-Straße, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -120,8 +120,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5417366,
-          50.9003195
+          7.5417516,
+          50.9000897
         ]
       },
       "properties": {
@@ -129,9 +129,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Finkenweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -148,9 +148,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Jakob-Engels-Straße, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -168,7 +168,7 @@
         "city": "Nümbrecht",
         "full_address": "Meta-Herz-Straße, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -187,7 +187,7 @@
         "city": "Nümbrecht",
         "full_address": "Nachtigallenweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -196,8 +196,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.540799,
-          50.9087167
+          7.5290461,
+          50.9067129
         ]
       },
       "properties": {
@@ -205,9 +205,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Bahnhofstraße, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -215,8 +215,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5436561,
-          50.9062647
+          7.5436556,
+          50.9062557
         ]
       },
       "properties": {
@@ -224,9 +224,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Gärtnerweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -234,8 +234,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5451492,
-          50.910077
+          7.5517616,
+          50.9062376
         ]
       },
       "properties": {
@@ -244,7 +244,7 @@
         "city": "Nümbrecht",
         "full_address": "Höhenstraße, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -263,7 +263,7 @@
         "city": "Nümbrecht",
         "full_address": "Kirchweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -281,9 +281,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Kapellenweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -300,9 +300,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Lindchenweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -320,7 +320,7 @@
         "city": "Nümbrecht",
         "full_address": "Parkstraße, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -339,7 +339,7 @@
         "city": "Nümbrecht",
         "full_address": "Weiherstraße, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -348,8 +348,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5345371,
-          50.9031272
+          7.5345047,
+          50.903157
         ]
       },
       "properties": {
@@ -357,9 +357,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Anemonenweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -376,9 +376,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Dorfplatz, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -396,7 +396,7 @@
         "city": "Nümbrecht",
         "full_address": "Erlenweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -415,7 +415,7 @@
         "city": "Nümbrecht",
         "full_address": "Feldstraße, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -424,8 +424,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5385063,
-          50.9061651
+          7.537675,
+          50.9081038
         ]
       },
       "properties": {
@@ -433,9 +433,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Friedhofstraße, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -452,9 +452,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Glockenblumenweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -462,8 +462,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5326207,
-          50.9038696
+          7.5348045,
+          50.9036999
         ]
       },
       "properties": {
@@ -472,7 +472,7 @@
         "city": "Nümbrecht",
         "full_address": "Gouvieuxstraße, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -481,8 +481,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5409326,
-          50.9020173
+          7.5406587,
+          50.9014918
         ]
       },
       "properties": {
@@ -491,7 +491,7 @@
         "city": "Nümbrecht",
         "full_address": "Hauptstraße, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -509,9 +509,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Heckenrosenweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -528,9 +528,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Kornblumenweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -548,7 +548,7 @@
         "city": "Nümbrecht",
         "full_address": "Leo-Baer-Straße, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -567,7 +567,7 @@
         "city": "Nümbrecht",
         "full_address": "Lilienweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -585,9 +585,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Lina-Friedrichs-Straße, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -604,9 +604,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Marktstraße, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -624,7 +624,7 @@
         "city": "Nümbrecht",
         "full_address": "Mateh-Yehuda-Straße, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -643,7 +643,7 @@
         "city": "Nümbrecht",
         "full_address": "Rotkleeweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -652,8 +652,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5300129,
-          50.9030093
+          7.5300913,
+          50.9030308
         ]
       },
       "properties": {
@@ -661,9 +661,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Sängertsweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -680,9 +680,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Schulstraße, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -700,7 +700,7 @@
         "city": "Nümbrecht",
         "full_address": "Schustergasse, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -719,7 +719,7 @@
         "city": "Nümbrecht",
         "full_address": "Wiesenstraße, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -737,9 +737,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Akeleiweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -747,8 +747,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5330314,
-          50.9017904
+          7.5327243,
+          50.9017368
         ]
       },
       "properties": {
@@ -756,9 +756,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Arnikaweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -776,7 +776,7 @@
         "city": "Nümbrecht",
         "full_address": "Fingerhutweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -795,7 +795,7 @@
         "city": "Nümbrecht",
         "full_address": "Goldnesselweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -813,9 +813,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Holunderweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -832,9 +832,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Lupinenweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -852,7 +852,7 @@
         "city": "Nümbrecht",
         "full_address": "Maiglöckchenweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -871,7 +871,7 @@
         "city": "Nümbrecht",
         "full_address": "Margeritenweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -889,9 +889,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Mohnweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -908,9 +908,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Narzissenweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -918,8 +918,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5369443,
-          50.8997293
+          7.5371197,
+          50.8993961
         ]
       },
       "properties": {
@@ -928,7 +928,7 @@
         "city": "Nümbrecht",
         "full_address": "Orchideenweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -947,7 +947,7 @@
         "city": "Nümbrecht",
         "full_address": "Schlüsselblumenweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -965,9 +965,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Schmiedeweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -984,9 +984,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Thymianweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -1004,7 +1004,7 @@
         "city": "Nümbrecht",
         "full_address": "Veilchenweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -1023,7 +1023,7 @@
         "city": "Nümbrecht",
         "full_address": "Wildrosenweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -1041,9 +1041,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Göpring, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -1060,9 +1060,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Ahornweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -1070,8 +1070,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5497141,
-          50.9292704
+          7.5497417,
+          50.9292726
         ]
       },
       "properties": {
@@ -1080,7 +1080,7 @@
         "city": "Nümbrecht",
         "full_address": "Denkmalweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -1089,8 +1089,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.553004,
-          50.9276375
+          7.5530392,
+          50.9276417
         ]
       },
       "properties": {
@@ -1099,7 +1099,7 @@
         "city": "Nümbrecht",
         "full_address": "Drosselweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -1117,46 +1117,8 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Eichenweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.5532432,
-          50.9339978
-        ]
-      },
-      "properties": {
-        "street": "Jürgesweg",
-        "postal_code": "51588",
-        "city": "Nümbrecht",
-        "full_address": "Jürgesweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.5550323,
-          50.9311169
-        ]
-      },
-      "properties": {
-        "street": "Kirschbaumweg",
-        "postal_code": "51588",
-        "city": "Nümbrecht",
-        "full_address": "Kirschbaumweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -1165,17 +1127,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5523756,
-          50.9267758
+          7.5531785,
+          50.9338417
         ]
       },
       "properties": {
-        "street": "Meisenweg",
+        "street": "Jürgesweg",
         "postal_code": "51588",
         "city": "Nümbrecht",
-        "full_address": "Meisenweg, 51588 Nümbrecht",
+        "full_address": "Jürgesweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -1184,55 +1146,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5502449,
-          50.9242316
+          7.5549689,
+          50.9311354
         ]
       },
       "properties": {
-        "street": "Mühlenweg",
+        "street": "Kirschbaumweg",
         "postal_code": "51588",
         "city": "Nümbrecht",
-        "full_address": "Mühlenweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.5517515,
-          50.9330547
-        ]
-      },
-      "properties": {
-        "street": "Seinscheweg",
-        "postal_code": "51588",
-        "city": "Nümbrecht",
-        "full_address": "Seinscheweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.5503435,
-          50.9264623
-        ]
-      },
-      "properties": {
-        "street": "Starenweg",
-        "postal_code": "51588",
-        "city": "Nümbrecht",
-        "full_address": "Starenweg, 51588 Nümbrecht",
+        "full_address": "Kirschbaumweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -1241,8 +1165,84 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5539544,
-          50.934432
+          7.5521083,
+          50.9268715
+        ]
+      },
+      "properties": {
+        "street": "Meisenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Meisenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5501742,
+          50.9241987
+        ]
+      },
+      "properties": {
+        "street": "Mühlenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Mühlenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5523718,
+          50.9332235
+        ]
+      },
+      "properties": {
+        "street": "Seinscheweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Seinscheweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5505137,
+          50.9263286
+        ]
+      },
+      "properties": {
+        "street": "Starenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Starenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5544018,
+          50.9345166
         ]
       },
       "properties": {
@@ -1251,7 +1251,7 @@
         "city": "Nümbrecht",
         "full_address": "Stollenweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -1269,46 +1269,8 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Taubenweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.5561838,
-          50.9310511
-        ]
-      },
-      "properties": {
-        "street": "Backhausweg",
-        "postal_code": "51588",
-        "city": "Nümbrecht",
-        "full_address": "Backhausweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.5552728,
-          50.9262787
-        ]
-      },
-      "properties": {
-        "street": "Bachstelzenweg",
-        "postal_code": "51588",
-        "city": "Nümbrecht",
-        "full_address": "Bachstelzenweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -1317,17 +1279,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5587714,
-          50.9314732
+          7.5561357,
+          50.9310767
         ]
       },
       "properties": {
-        "street": "Freibadstraße",
+        "street": "Backhausweg",
         "postal_code": "51588",
         "city": "Nümbrecht",
-        "full_address": "Freibadstraße, 51588 Nümbrecht",
+        "full_address": "Backhausweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -1336,8 +1298,46 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5546713,
-          50.9283811
+          7.5552685,
+          50.9262708
+        ]
+      },
+      "properties": {
+        "street": "Bachstelzenweg",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Bachstelzenweg, 51588 Nümbrecht",
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5586862,
+          50.9314382
+        ]
+      },
+      "properties": {
+        "street": "Freibadstraße",
+        "postal_code": "51588",
+        "city": "Nümbrecht",
+        "full_address": "Freibadstraße, 51588 Nümbrecht",
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.5546567,
+          50.928339
         ]
       },
       "properties": {
@@ -1345,9 +1345,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Feuerwehrstraße, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -1355,8 +1355,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5598845,
-          50.9274217
+          7.5596645,
+          50.9272876
         ]
       },
       "properties": {
@@ -1364,9 +1364,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Kalksteinstraße, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -1374,8 +1374,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5660418,
-          50.9315238
+          7.5652782,
+          50.9312354
         ]
       },
       "properties": {
@@ -1384,7 +1384,7 @@
         "city": "Nümbrecht",
         "full_address": "Kiefernweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -1403,7 +1403,7 @@
         "city": "Nümbrecht",
         "full_address": "Lindenweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -1412,8 +1412,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.554097,
-          50.9242889
+          7.5540626,
+          50.9242424
         ]
       },
       "properties": {
@@ -1421,9 +1421,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Talstraße, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     },
     {
@@ -1431,8 +1431,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.5615106,
-          50.9290052
+          7.5614316,
+          50.9290406
         ]
       },
       "properties": {
@@ -1440,9 +1440,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Weißdornweg, 51588 Nümbrecht",
-        "bezirk": "Bezirk 4",
-        "kandidat": "Kandidat 4",
-        "farbe": "#FFA07A"
+        "bezirk": "Bezirk 2",
+        "kandidat": "Thomas Schlegel",
+        "farbe": "#4ECDC4"
       }
     },
     {
@@ -1450,8 +1450,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.585267,
-          50.90394
+          7.585114,
+          50.9039214
         ]
       },
       "properties": {
@@ -1460,7 +1460,7 @@
         "city": "Nümbrecht",
         "full_address": "Mühlenbergweg, 51588 Nümbrecht",
         "bezirk": "Bezirk 1",
-        "kandidat": "Kandidat 1",
+        "kandidat": "Marcus Schmitz",
         "farbe": "#FF6B6B"
       }
     },
@@ -1479,7 +1479,7 @@
         "city": "Nümbrecht",
         "full_address": "Gering, 51588 Nümbrecht",
         "bezirk": "Bezirk 2",
-        "kandidat": "Kandidat 2",
+        "kandidat": "Thomas Schlegel",
         "farbe": "#4ECDC4"
       }
     },
@@ -1497,9 +1497,9 @@
         "postal_code": "51588",
         "city": "Nümbrecht",
         "full_address": "Hochstraße, 51588 Nümbrecht",
-        "bezirk": "Bezirk 3",
-        "kandidat": "Kandidat 3",
-        "farbe": "#45B7D1"
+        "bezirk": "Bezirk 1",
+        "kandidat": "Marcus Schmitz",
+        "farbe": "#FF6B6B"
       }
     }
   ]

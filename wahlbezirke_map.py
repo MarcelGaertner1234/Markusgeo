@@ -118,14 +118,12 @@ class WahlbezirkeMapConverter:
                 'farbe': COLORS[len(kandidaten) % len(COLORS)]
             }
         
-        # Falls keine Bezirke gefunden, erstelle Beispiel-Bezirke
+        # Falls keine Bezirke gefunden, erstelle die 2 bekannten Kandidaten-Bezirke
         if not kandidaten:
-            logger.warning("Keine Bezirke im PDF gefunden. Erstelle Beispiel-Bezirke.")
+            logger.warning("Keine Bezirke im PDF gefunden. Erstelle Bezirke für Marcus Schmitz und Thomas Schlegel.")
             kandidaten = {
-                'Bezirk 1': {'name': 'Kandidat 1', 'strassen': [], 'farbe': COLORS[0]},
-                'Bezirk 2': {'name': 'Kandidat 2', 'strassen': [], 'farbe': COLORS[1]},
-                'Bezirk 3': {'name': 'Kandidat 3', 'strassen': [], 'farbe': COLORS[2]},
-                'Bezirk 4': {'name': 'Kandidat 4', 'strassen': [], 'farbe': COLORS[3]},
+                'Bezirk 1': {'name': 'Marcus Schmitz', 'strassen': [], 'farbe': '#FF6B6B'},
+                'Bezirk 2': {'name': 'Thomas Schlegel', 'strassen': [], 'farbe': '#4ECDC4'},
             }
         
         logger.info(f"Gefundene Bezirke: {len(kandidaten)}")
