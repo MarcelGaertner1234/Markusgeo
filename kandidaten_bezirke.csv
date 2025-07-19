@@ -1,3 +1,17 @@
-bezirk,kandidat,farbe,anzahl_strassen
-Bezirk 1,Marcus Schmitz,#FF6B6B,40
-Bezirk 2,Thomas Schlegel,#4ECDC4,39
+wbz,name,kandidat,wahlberechtigte,farbe,anzahl_strassen_auf_karte
+WBZ 10,Nümbrecht 1,Gisa Hauschildt,976,#FF6B6B,16
+WBZ 100,Winterborn,Christopher Seinsche,906,#FFDAB9,0
+WBZ 110,Grötzenberg,Björn Dittich,900,#E8B4B8,1
+WBZ 120,Hömel,Titzian Crisci,872,#95E1D3,0
+WBZ 130,Benroth/Berkenroth,Stephan Rühl,912,#F38181,0
+WBZ 140,Harscheid,Roger Adolphs,940,#AA96DA,0
+WBZ 150,Marienberghausen,Frank Schmitz,931,#FCBAD3,0
+WBZ 160,Elsenroth,Thomas Schlegel,946,#FFD93D,0
+WBZ 20,Nümbrecht 2,Jörg Reintsema,956,#4ECDC4,32
+WBZ 30,Nümbrecht 3,Dagmar Schmitz,905,#45B7D1,13
+WBZ 40,Nümbrecht 4,Jörg Menne,830,#FFA07A,24
+WBZ 50,Homburg-Bröl,Markus Lang,880,#98D8C8,3
+WBZ 60,Bierenbachtal West,Ulrike Herrgesell,891,#6C5CE7,23
+WBZ 70,Bierenbachtal Ost,Thomas Hellbusch,932,#A8E6CF,17
+WBZ 80,Gaderoth/Breunfeld,Philipp Beck,849,#FF8B94,0
+WBZ 90,Oberbreidenbach/Prombach,Manfred Henry Daub,859,#C7CEEA,0

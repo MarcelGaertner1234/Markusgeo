@@ -1,0 +1,165 @@
+{
+  "wahlbezirke": {
+    "WBZ 10": {
+      "name": "Nümbrecht 1",
+      "kandidat": "Gisa Hauschildt",
+      "wahlberechtigte": 976,
+      "strassen": [
+        "Anemonenweg", "Bahnhofstraße", "Bahnhofstraße - gerade Hausnummern 2-20",
+        "Dorfplatz", "Dr.-Rieck-Straße", "Friedhofstraße", "Friedhofstraße - ungerade Hausnummern 39-51",
+        "Gärtnerweg", "Kapellenweg", "Lina-Friedrichs-Straße", "Lindchenweg",
+        "Leo-Baer-Straße", "Marktstraße", "Poststraße", "Parkstraße",
+        "Schulstraße", "Schustergasse", "Weiherstraße"
+      ]
+    },
+    "WBZ 20": {
+      "name": "Nümbrecht 2",
+      "kandidat": "Jörg Reintsema",
+      "wahlberechtigte": 956,
+      "strassen": [
+        "Akeleiweg", "Arnikaweg", "Erlenweg", "Feldstraße",
+        "Fingerhutweg", "Friedhofstraße - gerade Hausnummern von 2-38 u. ungerade von 1-37",
+        "Glockenblumenweg", "Gouvieuxstraße", "Goldnesselweg", "Hauptstraße",
+        "Heckenrosenweg", "Kirchweg", "Kornblumenweg", "Lilienweg",
+        "Lupinenweg", "Maiglöckchenweg", "Margeritenweg", "Mateh-Yehuda-Straße",
+        "Mohnweg", "Narzissenweg", "Orchideenweg", "Rotkleeweg",
+        "Sängertsweg", "Schlüsselblumenweg", "Schmiedeweg", "Schulbergweg",
+        "Thymianweg", "Veilchenweg", "Waldfrieden", "Wiesenstraße",
+        "Wildrosenweg", "Zur alten Schmiede", "alle Straßen von Spreitgen"
+      ]
+    },
+    "WBZ 30": {
+      "name": "Nümbrecht 3",
+      "kandidat": "Dagmar Schmitz",
+      "wahlberechtigte": 905,
+      "strassen": [
+        "Amselweg", "Bitzenweg", "Bornenweg", "Dr.-Horst-Frese-Straße",
+        "Finkenweg", "Göpelweg", "Holunderweg", "Höhenstraße",
+        "Jakob-Engels-Straße", "Meta-Herz-Straße", "Nachtigallenweg", "Oberdorf",
+        "Zum Sonnenhof", "Göpring"
+      ]
+    },
+    "WBZ 40": {
+      "name": "Nümbrecht 4",
+      "kandidat": "Jörg Menne",
+      "wahlberechtigte": 830,
+      "strassen": [
+        "Ahornweg", "Backhausweg", "Bachstelzenweg", "Bahnhofstraße - ungerade Hausnummern",
+        "Denkmalweg", "Drosselweg", "Eichenweg", "Feuerwehrstraße",
+        "Freibadstraße", "Jürgesweg", "Kalksteinstraße", "Kiefernweg",
+        "Kirschbaumweg", "Lindenweg", "Meisenweg", "Mühlenbergweg",
+        "Mühlenweg", "Seinscheweg", "Starenweg", "Stollenweg",
+        "Talstraße", "Taubenweg", "Weißdornweg", "Gering", "Hochstraße"
+      ]
+    },
+    "WBZ 50": {
+      "name": "Homburg-Bröl",
+      "kandidat": "Markus Lang",
+      "wahlberechtigte": 880,
+      "ortsteile": ["Homburg-Bröl", "Heddinghausen", "Oberbröl", "Drinsahl"],
+      "strassen": ["Am Dorfplatz", "Arndtstraße", "Buchenweg"]
+    },
+    "WBZ 60": {
+      "name": "Bierenbachtal West",
+      "kandidat": "Ulrike Herrgesell",
+      "wahlberechtigte": 891,
+      "ortsteile": ["Huppichteroth"],
+      "strassen": [
+        "Am Mühlenberg", "Antoniusweg", "Auf dem Bühl", "Auf dem Wahn",
+        "Burgstraße", "Grüner Weg", "Höckelsbergweg", "Im Mühlengrund",
+        "Kirchberg", "Mönchsheide", "Mühlenweg", "Oberste Gasse",
+        "Postweg", "Raiffeisenstraße", "Schlesierweg", "Schulstraße",
+        "Steeg", "Steinbruchweg", "Stich", "Ulfenbach",
+        "Wiesenweg", "Wilhelmstraße", "Zur alten Burg", "Zur Flur",
+        "Zur Seifen"
+      ]
+    },
+    "WBZ 70": {
+      "name": "Bierenbachtal Ost",
+      "kandidat": "Thomas Hellbusch",
+      "wahlberechtigte": 932,
+      "ortsteile": ["Büschhof", "Niederbröl"],
+      "strassen": [
+        "Am Bierenbach", "Am Sportplatz", "Am Weiher", "An den Fischteichen",
+        "Berghausen", "Birkenweg", "Bruchweg", "Bühlweg",
+        "Friedhofstraße", "Gierzhagener Straße", "Grünweg", "Handweg",
+        "Herrenwiese", "Im Kreuzfeld", "Lindenweg", "Mühlenstraße",
+        "Ortsweg", "Pfarrweg", "Ringstraße"
+      ]
+    },
+    "WBZ 80": {
+      "name": "Gaderoth/Breunfeld",
+      "kandidat": "Philipp Beck",
+      "wahlberechtigte": 849,
+      "ortsteile": ["Gaderoth", "Breunfeld"]
+    },
+    "WBZ 90": {
+      "name": "Oberbreidenbach/Prombach",
+      "kandidat": "Manfred Henry Daub",
+      "wahlberechtigte": 859,
+      "ortsteile": ["Oberbreidenbach", "Prombach", "Berghof", "Kurtenbach", "Lindscheid"]
+    },
+    "WBZ 100": {
+      "name": "Winterborn",
+      "kandidat": "Christopher Seinsche",
+      "wahlberechtigte": 906,
+      "ortsteile": ["Winterborn", "Bruch", "Erlinghausen", "Malzhagen", "Überdorf"]
+    },
+    "WBZ 110": {
+      "name": "Grötzenberg",
+      "kandidat": "Björn Dittich",
+      "wahlberechtigte": 900,
+      "ortsteile": ["Grötzenberg", "Hahn", "Heddinghausen", "Löhe", "Stockheim"],
+      "strassen": ["Zur Delle - Hausnummern 1-17"]
+    },
+    "WBZ 120": {
+      "name": "Hömel",
+      "kandidat": "Titzian Crisci",
+      "wahlberechtigte": 872,
+      "ortsteile": [
+        "Hömel", "Wirtenbach", "Altennümbrecht", "Büscherhof",
+        "Elsenroth - Hausnummern 48-56 u. 73", "Hasenberg", "Heide",
+        "Heisterstock", "Krahwinkel", "Oberelben", "Straßerhof"
+      ]
+    },
+    "WBZ 130": {
+      "name": "Benroth/Berkenroth",
+      "kandidat": "Stephan Rühl",
+      "wahlberechtigte": 912,
+      "ortsteile": ["Benroth", "Berkenroth", "Bierenbacherhof", "Bierenbach", "Oberstaffelbach"]
+    },
+    "WBZ 140": {
+      "name": "Harscheid",
+      "kandidat": "Roger Adolphs",
+      "wahlberechtigte": 940,
+      "ortsteile": [
+        "Harscheid", "Ahe", "Bellinghausen", "Brüchermühle",
+        "Distelkamp", "Krähenbühl", "Nippes", "Roth", "Spreitgen"
+      ]
+    },
+    "WBZ 150": {
+      "name": "Marienberghausen",
+      "kandidat": "Frank Schmitz",
+      "wahlberechtigte": 931,
+      "ortsteile": [
+        "Marienberghausen", "Berg", "Bernberg", "Bierenbacherhof",
+        "Bodenwiese", "Breitenhagen", "Breithof", "Dorperhof",
+        "Eicherhof", "Friedenthal", "Grunewald", "Hammermühle",
+        "Hammerschlade", "Heddinghausen", "Heidberg", "Heisterbusch",
+        "Helten", "Hinterwolmersbach", "Hohenbusch", "Horperath",
+        "Leuscherath", "Marienfels", "Schlingensiepen", "Weiershagen"
+      ]
+    },
+    "WBZ 160": {
+      "name": "Elsenroth",
+      "kandidat": "Thomas Schlegel",
+      "wahlberechtigte": 946,
+      "ortsteile": [
+        "Elsenroth - ohne Hausnummern 48-56 u. 73", "Abelsnaaf", "Affhausen",
+        "Braunsberg", "Dahlen", "Elsenrother Hof", "Frielinghausen",
+        "Grünenthal", "Hardt", "Linde", "Oberelben", "Oberwiehl",
+        "Unterwiehl", "Wahn"
+      ]
+    }
+  }
+}
