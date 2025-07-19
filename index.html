@@ -209,101 +209,35 @@
         </div>
 
         <div class="main-content">
-            <div class="tab-buttons">
-                <button class="tab-button active" onclick="showTab('kreistag')">
-                    🏛️ Kreistagskandidaten-Karte
-                </button>
-                <button class="tab-button" onclick="showTab('enhanced')">
-                    🗺️ Erweiterte Karte (Kandidaten-Ansicht)
-                </button>
-                <button class="tab-button" onclick="showTab('standard')">
-                    📍 Standard-Karte (Bezirks-Ansicht)
-                </button>
-                <button class="tab-button" onclick="showTab('basic')">
-                    📌 Basis-Karte (Alle Straßen)
-                </button>
+            <h2 style="text-align: center; color: #333; margin-bottom: 20px;">
+                🏛️ Kreistagskandidaten-Karte
+            </h2>
+            
+            <div class="map-container">
+                <iframe src="wahlbezirke_fixed.html"></iframe>
             </div>
             
-            <div id="kreistag" class="tab-content active">
-                <div class="map-container">
-                    <iframe src="wahlbezirke_fixed.html"></iframe>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🏛️ Kreistagskandidaten-Features</h3>
+                    <ul class="feature-list">
+                        <li><b>Marcus Schmitz</b> - Kreis-WBZ 1 (8 Bezirke)</li>
+                        <li><b>Thomas Schlegel</b> - Kreis-WBZ 2 (8 Bezirke)</li>
+                        <li>Einklappbare Legende mit Toggle</li>
+                        <li>Umschaltung zwischen Ansichten</li>
+                        <li>Direkte Kandidaten-Auswahl</li>
+                        <li>Farbcodierung nach Kreistagkandidat</li>
+                    </ul>
                 </div>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>🏛️ Kreistagskandidaten-Features</h3>
-                        <ul class="feature-list">
-                            <li><b>Marcus Schmitz</b> - Kreis-WBZ 1 (8 Bezirke)</li>
-                            <li><b>Thomas Schlegel</b> - Kreis-WBZ 2 (8 Bezirke)</li>
-                            <li>Einklappbare Legende mit Toggle</li>
-                            <li>Umschaltung zwischen Ansichten</li>
-                            <li>Direkte Kandidaten-Auswahl</li>
-                            <li>Farbcodierung nach Kreistagkandidat</li>
-                        </ul>
-                    </div>
-                    <div class="info-card">
-                        <h3>🎯 Bedienung</h3>
-                        <ul class="feature-list">
-                            <li>Klicken Sie auf Kreistagskandidaten-Buttons</li>
-                            <li>Wechseln zwischen Gruppierungs-Modi</li>
-                            <li>Legende ein-/ausklappen mit Header-Klick</li>
-                            <li>Einzelne Kandidaten direkt anwählbar</li>
-                            <li>Status zeigt aktive Auswahl</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="enhanced" class="tab-content">
-                <div class="map-container">
-                    <iframe src="wahlbezirke_map_enhanced.html"></iframe>
-                </div>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>🎯 Neue Funktionen</h3>
-                        <ul class="feature-list">
-                            <li>Kandidaten-basierte Gruppierung</li>
-                            <li>Ein-Klick Kandidatenauswahl</li>
-                            <li>Interaktive Legende mit Buttons</li>
-                            <li>Alle anzeigen/ausblenden Funktion</li>
-                            <li>Farbcodierung nach Kandidat</li>
-                        </ul>
-                    </div>
-                    <div class="info-card">
-                        <h3>💡 Bedienungshinweise</h3>
-                        <ul class="feature-list">
-                            <li>Klicken Sie auf einen Kandidaten in der Legende</li>
-                            <li>Nutzen Sie die Layer-Kontrolle für Details</li>
-                            <li>Buttons für schnelle Auswahl</li>
-                            <li>Thomas Schlegel ist hervorgehoben</li>
-                            <li>Hover über Marker für Straßeninfo</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="standard" class="tab-content">
-                <div class="map-container">
-                    <iframe src="wahlbezirke_map.html"></iframe>
-                </div>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>📋 Standard-Ansicht</h3>
-                        <p>Diese Karte zeigt alle 16 Wahlbezirke einzeln in der Layer-Kontrolle. 
-                        Ideal für detaillierte Bezirksanalyse.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="basic" class="tab-content">
-                <div class="map-container">
-                    <iframe src="Nümbrecht straßengenau_map.html"></iframe>
-                </div>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>🗺️ Basis-Straßenkarte</h3>
-                        <p>Die ursprüngliche Karte mit allen extrahierten Straßen aus dem PDF, 
-                        ohne Wahlbezirk-Zuordnung.</p>
-                    </div>
+                <div class="info-card">
+                    <h3>🎯 Bedienung</h3>
+                    <ul class="feature-list">
+                        <li>Klicken Sie auf Kreistagskandidaten-Buttons</li>
+                        <li>Wechseln zwischen Gruppierungs-Modi</li>
+                        <li>Legende ein-/ausklappen mit Header-Klick</li>
+                        <li>Einzelne Kandidaten direkt anwählbar</li>
+                        <li>Status zeigt aktive Auswahl</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -330,19 +264,5 @@
         </div>
     </div>
 
-    <script>
-        function showTab(tabName) {
-            // Alle Tabs und Buttons zurücksetzen
-            const tabs = document.querySelectorAll('.tab-content');
-            const buttons = document.querySelectorAll('.tab-button');
-            
-            tabs.forEach(tab => tab.classList.remove('active'));
-            buttons.forEach(button => button.classList.remove('active'));
-            
-            // Aktiven Tab anzeigen
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-        }
-    </script>
 </body>
 </html>
