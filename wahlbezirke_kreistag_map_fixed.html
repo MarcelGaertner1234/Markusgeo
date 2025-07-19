@@ -33,6 +33,37 @@
                     top: 0.0%;
                 }
                 .leaflet-container { font-size: 1rem; }
+                
+                /* Mobile Anpassungen */
+                @media (max-width: 768px) {
+                    #legend-container {
+                        bottom: 60px !important; /* Mehr Abstand nach unten auf Mobilgeräten */
+                        right: 10px !important;
+                        left: 10px !important;
+                        width: auto !important;
+                        max-width: 95% !important;
+                    }
+                    
+                    #legend-content {
+                        max-height: 50vh !important; /* Maximal 50% der Viewport-Höhe */
+                    }
+                    
+                    /* Kleinere Schriftgrößen auf Mobilgeräten */
+                    #legend-header h3 {
+                        font-size: 16px !important;
+                    }
+                    
+                    #legend-container button {
+                        font-size: 14px !important;
+                    }
+                }
+                
+                /* Noch kleinere Geräte */
+                @media (max-width: 480px) {
+                    #legend-container {
+                        bottom: 80px !important; /* Noch mehr Abstand für sehr kleine Bildschirme */
+                    }
+                }
             </style>
         
 </head>
