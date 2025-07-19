@@ -33,6 +33,71 @@
                     top: 0.0%;
                 }
                 .leaflet-container { font-size: 1rem; }
+                
+                /* Mobile Responsive Styles */
+                @media (max-width: 768px) {
+                    #control-panel {
+                        width: calc(100% - 20px) !important;
+                        right: 10px !important;
+                        left: 10px !important;
+                        bottom: 10px !important;
+                        max-width: none !important;
+                    }
+                    
+                    #panel-content {
+                        max-height: 50vh !important;
+                    }
+                    
+                    #control-panel h3 {
+                        font-size: 16px !important;
+                    }
+                    
+                    #control-panel h4 {
+                        font-size: 14px !important;
+                    }
+                    
+                    #control-panel button {
+                        font-size: 12px !important;
+                        padding: 8px !important;
+                    }
+                    
+                    #control-panel label {
+                        font-size: 12px !important;
+                    }
+                    
+                    .kandidat-check {
+                        transform: scale(1.2);
+                        margin-right: 8px;
+                    }
+                }
+                
+                @media (max-width: 480px) {
+                    #control-panel {
+                        border-width: 2px !important;
+                    }
+                    
+                    #panel-header {
+                        padding: 12px !important;
+                    }
+                    
+                    #panel-content {
+                        max-height: 40vh !important;
+                    }
+                }
+                
+                /* Hover-Effekt für Header */
+                #panel-header:hover {
+                    background: linear-gradient(135deg, #1565C0 0%, #C62828 100%) !important;
+                }
+                
+                /* Smooth overflow transition */
+                #panel-content {
+                    overflow: hidden;
+                }
+                
+                #panel-content.expanded {
+                    overflow-y: auto;
+                }
             </style>
         
 </head>
@@ -247,6 +312,80 @@
         
         document.getElementById('status-text').innerHTML = text;
     }
+    
+    // Toggle Panel Funktionalität
+    var isPanelCollapsed = false;
+    
+    function togglePanel() {
+        var panel = document.getElementById('control-panel');
+        var content = document.getElementById('panel-content');
+        var icon = document.getElementById('toggle-icon');
+        
+        if (isPanelCollapsed) {
+            // Panel öffnen
+            content.style.maxHeight = window.innerWidth <= 768 ? '50vh' : '600px';
+            content.style.opacity = '1';
+            content.style.padding = '20px';
+            content.style.overflow = 'hidden';
+            setTimeout(function() {
+                content.style.overflow = 'auto';
+            }, 300);
+            icon.style.transform = 'translateY(-50%) rotate(0deg)';
+            isPanelCollapsed = false;
+        } else {
+            // Panel schließen
+            content.style.overflow = 'hidden';
+            content.style.maxHeight = '0';
+            content.style.opacity = '0';
+            content.style.padding = '0 20px';
+            icon.style.transform = 'translateY(-50%) rotate(-90deg)';
+            isPanelCollapsed = true;
+        }
+        
+        // Zustand speichern
+        localStorage.setItem('panelCollapsed', isPanelCollapsed);
+    }
+    
+    // Event Listener für Header
+    document.addEventListener('DOMContentLoaded', function() {
+        var header = document.getElementById('panel-header');
+        
+        // Click und Touch Events
+        header.addEventListener('click', togglePanel);
+        header.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            togglePanel();
+        });
+        
+        // Gespeicherten Zustand wiederherstellen
+        var savedState = localStorage.getItem('panelCollapsed');
+        if (savedState === 'true') {
+            isPanelCollapsed = false; // Setze auf false, damit togglePanel es auf true setzt
+            togglePanel();
+        }
+        
+        // Auf Mobile automatisch einklappen
+        if (window.innerWidth <= 768) {
+            if (!savedState) { // Nur wenn kein gespeicherter Zustand vorhanden
+                isPanelCollapsed = false;
+                togglePanel();
+            }
+        }
+        
+        // Window Resize Handler
+        var resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                var content = document.getElementById('panel-content');
+                if (!isPanelCollapsed && window.innerWidth <= 768) {
+                    content.style.maxHeight = '50vh';
+                } else if (!isPanelCollapsed) {
+                    content.style.maxHeight = '600px';
+                }
+            }, 250);
+        });
+    });
     </script>
     
     
@@ -255,16 +394,22 @@
                 background-color: white; z-index: 1000; 
                 border: 3px solid #333; border-radius: 10px;
                 box-shadow: 0 0 25px rgba(0,0,0,0.4);
-                font-family: Arial, sans-serif;">
+                font-family: Arial, sans-serif;
+                transition: all 0.3s ease-in-out;">
         
-        <div style="background: linear-gradient(135deg, #1976D2 0%, #D32F2F 100%); 
-                    color: white; padding: 15px; border-radius: 7px 7px 0 0;">
+        <div id="panel-header" style="background: linear-gradient(135deg, #1976D2 0%, #D32F2F 100%); 
+                    color: white; padding: 15px; border-radius: 7px 7px 0 0;
+                    cursor: pointer; user-select: none; position: relative;">
             <h3 style="margin: 0; font-size: 20px; text-align: center;">
                 CDU Wahlbezirke Nümbrecht 2024
+                <span id="toggle-icon" style="position: absolute; right: 15px; top: 50%; 
+                      transform: translateY(-50%); font-size: 18px; transition: transform 0.3s;">
+                    ▼
+                </span>
             </h3>
         </div>
         
-        <div style="padding: 20px; max-height: 600px; overflow-y: auto;">
+        <div id="panel-content" style="padding: 20px; max-height: 600px; overflow-y: auto; transition: all 0.3s ease-in-out;">
             
             <!-- Kreistagskandidaten -->
             <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
