@@ -93,40 +93,7 @@
                     </button>
                 </div>
                 
-                <div style="display: flex; gap: 8px;">
-                    <button id="btn-both" 
-                            style="flex: 1; padding: 12px; background: #4CAF50; 
-                                   color: white; border: none; border-radius: 6px; 
-                                   cursor: pointer; font-weight: bold; font-size: 14px;
-                                   box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
-                        ✓ Beide Kreistagskandidaten
-                    </button>
-                    <button id="btn-none" 
-                            style="flex: 1; padding: 12px; background: #f44336; 
-                                   color: white; border: none; border-radius: 6px; 
-                                   cursor: pointer; font-weight: bold; font-size: 14px;
-                                   box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
-                        ✗ Alle ausblenden
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Anzeigemodus -->
-            <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; 
-                        border: 2px solid #e9ecef; margin-bottom: 15px;">
-                <h4 style="margin: 0 0 10px 0; color: #333; font-size: 16px;">
-                    🔍 Anzeigemodus
-                </h4>
-                <label style="display: flex; align-items: center; margin-bottom: 8px; cursor: pointer;">
-                    <input type="radio" name="viewMode" id="mode-kreistag" value="kreistag" checked 
-                           style="margin-right: 8px; width: 16px; height: 16px;">
-                    <span style="font-size: 14px;">Nach Kreistagskandidaten gruppiert</span>
-                </label>
-                <label style="display: flex; align-items: center; cursor: pointer;">
-                    <input type="radio" name="viewMode" id="mode-kandidaten" value="kandidaten" 
-                           style="margin-right: 8px; width: 16px; height: 16px;">
-                    <span style="font-size: 14px;">Einzelne Kandidaten anzeigen</span>
-                </label>
+
             </div>
             
             <!-- Kandidaten-Details -->
@@ -435,7 +402,7 @@
             <div style="margin-top: 15px; padding: 12px; background: #e8f5e9; 
                         border-radius: 6px; text-align: center; border: 1px solid #c8e6c9;">
                 <span id="status-text" style="color: #2e7d32; font-weight: bold; font-size: 14px;">
-                    Zeige beide Kreistagskandidaten
+                    Zurücksetzen
                 </span>
             </div>
         </div>
@@ -494,17 +461,7 @@
             showKreistagkandidat('Thomas Schlegel');
         });
         
-        document.getElementById('btn-both').addEventListener('click', showBothKreistagkandidaten);
-        document.getElementById('btn-none').addEventListener('click', hideAllLayers);
-        
-        // Radio-Buttons für Anzeigemodus
-        document.getElementById('mode-kreistag').addEventListener('change', function() {
-            if (this.checked) switchToKreistagMode();
-        });
-        
-        document.getElementById('mode-kandidaten').addEventListener('change', function() {
-            if (this.checked) switchToKandidatenMode();
-        });
+
         
         // Kandidaten-Items
         var kandidatenItems = document.querySelectorAll('.kandidat-item');
@@ -565,7 +522,7 @@
             mymap.addLayer(allLayers['Kreistagkandidat: Thomas Schlegel']);
         }
         
-        updateStatus('Zeige beide Kreistagskandidaten');
+        updateStatus('Zurücksetzen');
     }
     
     function showSingleKandidat(name) {
